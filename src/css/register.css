@@ -1,0 +1,319 @@
+#sousou {
+  height: 78px;
+}
+
+.sousou {
+  height: 78px;
+  padding-top: 20px;
+}
+
+.sousou span {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.sousou span i {
+  display: inline-block;
+  position: relative;
+  right: -6px;
+  top: 8px;
+  padding: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/bg_direct.png) no-repeat -20px 0px;
+}
+
+.sousou i {
+  display: inline-block;
+  position: relative;
+  right: 0px;
+  top: 5px;
+  padding-right: 5px;
+  width: 19px;
+  height: 16px;
+  background: url(../images/bg_icon.png) no-repeat -30px 0px;
+}
+
+.goucai {
+  height: 95px;
+  line-height: 95px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.stepNavi {
+  margin-bottom: 47px;
+  text-align: center;
+  padding-left: 183px;
+  height: 108px;
+}
+
+.stepNavi ul li {
+  float: left;
+  width: 218px;
+  display: block;
+  font-size: 16px;
+  color: #838c99;
+  text-align: center;
+}
+
+.stepNavi ul li:nth-child(1):before {
+  display: block;
+  content: '';
+  height: 50px;
+  margin-bottom: 11px;
+  background: url(../images/bg_member_step.png) no-repeat 0px -111px;
+}
+
+.stepNavi ul li:nth-child(3):before {
+  display: block;
+  content: '';
+  height: 50px;
+  margin-bottom: 11px;
+  background: url(../images/bg_member_step.png) no-repeat -436px -110px;
+}
+
+.stepNavi ul li:before {
+  display: block;
+  content: '';
+  height: 50px;
+  margin-bottom: 11px;
+  background: url(../images/bg_member_step.png) no-repeat;
+}
+
+.shutou {
+  height: 32px;
+}
+
+.shutou i {
+  font-size: 20px;
+}
+
+.shutou em {
+  font-size: 14px;
+  color: #666;
+}
+
+.bitian {
+  height: 35px;
+  color: #666;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.bitian p {
+  float: left;
+  width: 200px;
+}
+
+.bitian p:nth-child(2) {
+  float: right;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.bitian p:nth-child(2) em {
+  color: red;
+}
+
+.bitianb {
+  height: 999px;
+  border-top: 2px solid black;
+}
+
+.bitianb dl {
+  width: 100%;
+  min-height: 91px;
+  border-bottom: 1px solid #ccc;
+}
+
+.bitianb dl dt {
+  width: 183px;
+  float: left;
+  padding: 20px 0 0 16px;
+  background: #F6F9FC;
+  min-height: 90px;
+}
+
+.bitianb dl dt em {
+  color: red;
+}
+
+.bitianb dl dd {
+  float: left;
+  width: 820px;
+  padding: 12px 0 0 12px;
+}
+
+.bitianb dl dd input {
+  width: 200px;
+  height: 36px;
+  border: 1px solid #ccc;
+}
+
+.bitianb dl dd select {
+  width: 200px;
+  height: 36px;
+  color: #666;
+}
+
+.bitianb dl dd p {
+  color: #666;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.bitianb dl:nth-child(2) dd {
+  padding-top: 22px;
+}
+
+.bitianb dl:nth-child(2) dd input {
+  width: 20px;
+  height: 20px;
+  color: #666;
+  background: red;
+  margin-right: 10px;
+}
+
+.bitianb dl:nth-child(3) {
+  height: 127px;
+}
+
+.bitianb dl:nth-child(3) dt {
+  height: 126px;
+}
+
+.bitianb dl:nth-child(3) dd span {
+  color: red;
+}
+
+.bitianb dl:nth-child(3) dd input {
+  margin-bottom: 5px;
+}
+
+.bitianb dl:nth-child(3) dd ul li {
+  margin-bottom: 3px;
+}
+
+.bitianb dl:nth-child(3) dd ul li em {
+  font-weight: 900;
+}
+
+.bitianb dl:nth-child(4) .sh {
+  color: red;
+  padding-left: 5px;
+}
+
+.bitianb dl:nth-child(4) span {
+  padding-left: 5px;
+  color: #666;
+}
+
+.bitianb dl:nth-child(4) button {
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  height: 36px;
+  width: 100px;
+  position: relative;
+  top: 2px;
+  left: 0px;
+}
+
+.bitianb dl:nth-child(4) input {
+  width: 300px;
+}
+
+.bitianb dl:nth-child(5) .sh {
+  color: red;
+  padding-left: 5px;
+}
+
+.bitianb dl:nth-child(5) span {
+  padding-left: 5px;
+  color: #666;
+}
+
+.bitianb dl:nth-child(5) input {
+  width: 300px;
+}
+
+.bitianb dl:nth-child(6) .sh {
+  color: red;
+  padding-left: 5px;
+}
+
+.bitianb dl:nth-child(6) span {
+  padding-left: 5px;
+  color: #666;
+}
+
+.bitianb dl:nth-child(6) input {
+  width: 300px;
+}
+
+.bitianb dl:nth-child(7) .sh {
+  color: red;
+  padding-left: 5px;
+}
+
+.bitianb dl:nth-child(7) span {
+  padding-left: 5px;
+  color: #666;
+}
+
+.bitianb dl:nth-child(7) input {
+  width: 300px;
+}
+
+.bitianb dl:nth-child(8) .sh {
+  color: red;
+  padding-left: 5px;
+}
+
+.bitianb dl:nth-child(8) span {
+  padding-left: 5px;
+  color: #666;
+}
+
+.bitianb dl:nth-child(8) input {
+  width: 300px;
+}
+
+.bitianb dl:nth-child(9) .checkboxGroup {
+  float: left;
+  weight: 90px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.bitianb dl:nth-child(9) .checkboxGroup input {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.buySome {
+  height: 67px;
+  padding-left: 231px;
+  margin-bottom: 114px;
+}
+
+.buySome p {
+  height: 65px;
+  float: left;
+  text-align: center;
+  width: 243px;
+  line-height: 65px;
+  font-size: 18px;
+  margin-right: 9px;
+}
+
+.buySome p:nth-child(1) {
+  border: 1px solid black;
+}
+
+.buySome p:nth-child(2) {
+  color: #fff;
+  background: red;
+}

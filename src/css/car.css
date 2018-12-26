@@ -1,0 +1,459 @@
+#sousou {
+  height: 78px;
+}
+
+.sousou {
+  height: 78px;
+  padding-top: 20px;
+}
+
+.sousou span {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.sousou span i {
+  display: inline-block;
+  position: relative;
+  right: -6px;
+  top: 8px;
+  padding: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/bg_direct.png) no-repeat -20px 0px;
+}
+
+.sousou i {
+  display: inline-block;
+  position: relative;
+  right: 0px;
+  top: 5px;
+  padding-right: 5px;
+  width: 19px;
+  height: 16px;
+  background: url(../images/bg_icon.png) no-repeat -30px 0px;
+}
+
+.goucai {
+  height: 95px;
+  line-height: 95px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.goucar {
+  height: 55px;
+}
+
+.goucar .stepNavi {
+  width: 332px;
+  height: 55px;
+  float: right;
+  padding-top: 20px;
+}
+
+.goucar .stepNavi .on {
+  color: #e70e0e;
+}
+
+.goucar .stepNavi .on:before {
+  content: '1';
+  overflow: hidden;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 0 6px 0 0;
+  background: url(../images/sp_order_step.gif) no-repeat -26px 0px;
+  text-indent: -9999em;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.goucar .stepNavi .on:after {
+  content: '';
+  display: inline-block;
+  width: 11px;
+  height: 18px;
+  margin: -2px 15px 0;
+  background: url(../images/sp_order_step.gif) no-repeat -26px -78px;
+  vertical-align: middle;
+}
+
+.goucar .stepNavi li {
+  float: left;
+  width: auto;
+  font-size: 15px;
+  color: #a2aab4;
+}
+
+.goucar .stepNavi li:nth-child(2):before {
+  content: '1';
+  overflow: hidden;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 0 6px 0 0;
+  background: url(../images/sp_order_step.gif) no-repeat 0px 0px;
+  text-indent: -9999em;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.goucar .stepNavi li:nth-child(2):after {
+  content: '';
+  display: inline-block;
+  width: 11px;
+  height: 18px;
+  margin: -2px 15px 0;
+  background: url(../images/sp_order_step.gif) no-repeat 0px -78px;
+  vertical-align: middle;
+}
+
+.shou {
+  height: 83px;
+  padding-top: 30px;
+}
+
+.shou .shou1 {
+  width: 150px;
+  height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  float: right;
+  margin-right: 3px;
+}
+
+.carts {
+  min-height: 445px;
+  border-top: 2px solid #000;
+}
+
+.carts .carttb {
+  height: 49px;
+  background: #F6F9FC;
+}
+
+.carts .carttb li {
+  float: left;
+  height: 49px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  line-height: 49px;
+  font-size: 14px;
+}
+
+.carts .carttb li:nth-child(1) {
+  width: 60px;
+}
+
+.carts .carttb li:nth-child(2) {
+  width: 549px;
+}
+
+.carts .carttb li:nth-child(3) {
+  width: 99px;
+}
+
+.carts .carttb li:nth-child(4) {
+  width: 89px;
+}
+
+.carts .carttb li:nth-child(5) {
+  width: 89px;
+}
+
+.carts .carttb li:nth-child(6) {
+  width: 133px;
+}
+
+.carts .cartsts {
+  min-height: 400px;
+  margin-bottom: 20px;
+}
+
+.carts .cartsts .cartst {
+  height: 200px;
+  width: 100%;
+  padding-top: 33px;
+  border-bottom: 1px solid #ccc;
+}
+
+.carts .cartsts .cartst div {
+  float: left;
+  font-size: 14px;
+}
+
+.carts .cartsts .cartst div:nth-child(1) {
+  text-align: center;
+  width: 60px;
+}
+
+.carts .cartsts .cartst div:nth-child(2) {
+  width: 549px;
+}
+
+.carts .cartsts .cartst div:nth-child(2) img {
+  weight: 90px;
+  height: 90px;
+}
+
+.carts .cartsts .cartst div:nth-child(2) p {
+  height: 160px;
+  padding-left: 20px;
+  float: left;
+}
+
+.carts .cartsts .cartst div:nth-child(2) p span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  height: 18px;
+}
+
+.carts .cartsts .cartst div:nth-child(2) p span:last-child {
+  border: 1px solid #ccc;
+  width: 99px;
+  padding-left: 5px;
+  margin-top: 10px;
+  height: 22px;
+  line-height: 22px;
+}
+
+.carts .cartsts .cartst div:nth-child(2) p span:last-child:after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 9px;
+  margin: -2px 15px 0;
+  background: url(../images/bg_icon.png) no-repeat -570px 0px;
+  vertical-align: middle;
+}
+
+.carts .cartsts .cartst div:nth-child(2) p span em {
+  color: #ccc;
+}
+
+.carts .cartsts .cartst div:nth-child(3) {
+  width: 99px;
+  height: 160px;
+  text-align: center;
+  padding-top: 37px;
+}
+
+.carts .cartsts .cartst div:nth-child(3) span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  height: 18px;
+}
+
+.carts .cartsts .cartst div:nth-child(3) span:nth-child(1) {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.carts .cartsts .cartst div:nth-child(3) span:nth-child(3) i {
+  display: inline-block;
+  position: relative;
+  right: -3px;
+  top: 5px;
+  padding-right: 5px;
+  width: 19px;
+  height: 16px;
+  background: url(../images/bg_icon.png) no-repeat -810px 0;
+}
+
+.carts .cartsts .cartst div:nth-child(3) span em {
+  color: red;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.carts .cartsts .cartst div:nth-child(4) {
+  width: 89px;
+  height: 160px;
+  padding: 50px 16px 0px 16px;
+  text-align: center;
+}
+
+.carts .cartsts .cartst div:nth-child(4) p {
+  width: 60px;
+}
+
+.carts .cartsts .cartst div:nth-child(4) p input {
+  float: left;
+  width: 40px;
+  height: 34px;
+  border: 1px solid #ccc;
+  border-right: none;
+  padding-left: 5px;
+}
+
+.carts .cartsts .cartst div:nth-child(4) p span {
+  float: left;
+  display: block;
+  width: 20px;
+  height: 17px;
+  border: 1px solid #ccc;
+}
+
+.carts .cartsts .cartst div:nth-child(4) p span i {
+  display: inline-block;
+  position: relative;
+  right: -3px;
+  top: 5px;
+  padding-right: 5px;
+  width: 19px;
+  height: 16px;
+  background: url(../images/bg_icon2.png) no-repeat -2877px -19px;
+}
+
+.carts .cartsts .cartst div:nth-child(4) p span:nth-child(2) {
+  border-bottom: none;
+}
+
+.carts .cartsts .cartst div:nth-child(4) p span:nth-child(2) i {
+  display: inline-block;
+  position: relative;
+  right: -3px;
+  top: 5px;
+  padding-right: 5px;
+  width: 19px;
+  height: 16px;
+  background: url(../images/bg_icon2.png) no-repeat -2877px 0;
+}
+
+.carts .cartsts .cartst div:nth-child(5) {
+  width: 89px;
+  height: 160px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.carts .cartsts .cartst div:nth-child(5) p {
+  color: red;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.carts .cartsts .cartst div:nth-child(5) p:nth-child(2) {
+  color: #ccc;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.carts .cartsts .cartst div:nth-child(6) {
+  width: 133px;
+  height: 160px;
+  padding: 20px 0px 0px 10px;
+}
+
+.carts .cartsts .cartst div:nth-child(6) p {
+  font-size: 16px;
+  height: 30px;
+  width: 120px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.carts .cartsts .cartst div:nth-child(6) p:nth-child(1) {
+  border: 1px solid red;
+  color: red;
+}
+
+.carts .cartsts .cartst div:nth-child(6) p:nth-child(2) {
+  border: 1px solid black;
+  color: black;
+}
+
+.carts .cartsts .cartst div:nth-child(6) p:nth-child(3) {
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+.jiage {
+  height: 125px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.jiage dl {
+  float: left;
+  width: 33%;
+  height: 121px;
+  border-right: 1px solid #ccc;
+}
+
+.jiage dl:nth-child(3) {
+  border: none;
+}
+
+.jiage dl dt {
+  float: left;
+  text-align: center;
+  width: 130px;
+  line-height: 125px;
+}
+
+.jiage dl dd {
+  float: left;
+  text-align: right;
+  width: 130px;
+  line-height: 125px;
+}
+
+.jiage dl dd span {
+  display: block;
+  height: 40px;
+  width: 162px;
+}
+
+.jiage dl dd span em {
+  color: red;
+  font-weight: 900;
+}
+
+.shanchu {
+  height: 74px;
+  padding-top: 20px;
+}
+
+.shanchu strong {
+  margin-right: 5px;
+}
+
+.shanchu a {
+  font-size: 14px;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  color: #666666;
+  margin-right: 5px;
+}
+
+.buySome {
+  height: 67px;
+  padding-left: 231px;
+  margin-bottom: 67px;
+}
+
+.buySome p {
+  height: 65px;
+  float: left;
+  text-align: center;
+  width: 243px;
+  line-height: 65px;
+  font-size: 18px;
+  margin-right: 9px;
+}
+
+.buySome p:nth-child(1) {
+  border: 1px solid black;
+}
+
+.buySome p:nth-child(2) {
+  color: #fff;
+  background: red;
+}

@@ -1,0 +1,49 @@
+.nav {
+  width: 50px;
+  height: 280px;
+  padding: 5px 20px 10px 15px;
+  line-height: 100px;
+  background-color: yellow;
+  color: #fff;
+}
+
+.nav ul {
+  width: 1400px;
+  padding-top: 20px;
+  padding-bottom: 3em;
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+  padding: 5px 15px;
+  padding-top: 10px;
+  position: relative;
+  color: #666;
+}
+
+.nav li a {
+  display: inline-block;
+  color: #fff;
+}
+
+.nav li a.home {
+  background-color: orange;
+}
+
+.nav li ul {
+  position: absolute;
+  padding: 5px 20px;
+  color: #ccc;
+}
+
+.nav li ul a:hover {
+  color: #5b8c58;
+}
+
+.nav li:last-child {
+  float: right;
+}

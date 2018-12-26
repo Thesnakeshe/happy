@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>详情页</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/first.css" />
+    <link rel="stylesheet" type="text/css" href="../css/details.css" />
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="../js/details.js"></script>
+</head>
+<body>
+
+    <div id="headers">
+        <div class="headers con">
+             <!-- 顶格的 机场--> 
+             <div class="localSelect airport">
+             <p><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></p>
+             <ul class="air1" style="display:none">
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li> 
+              </ul> 
+             </div> 
+             <!-- 语言 --> 
+             <div class="localSelect lang" id="langArea"> 
+              <p class="selected" id="lang"><span><i class="i1"></i> 简体中文</span></p> 
+              <ul class="lang1" style="display:none"> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> 한국어</span> </a> </li> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> 简体中文</span></a> </li> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> 日本語</span></a> </li> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> English</span></a> </li> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> 繁體中文</span></a> </li> 
+              </ul> 
+             </div> 
+             <!-- 汇率 --> 
+             <div class="localSelect money" id="moneyArea"> 
+              <p class="selected" id="money"> <a href="javascript:;"> <span>CNY(元)</span></a> </p> 
+              <ul style="display:none;"> 
+               <li> <a href="javascript:;"> <span>CNY(元)</span></a> </li> 
+               <li> <a href="javascript:;"> <span>KRW(₩)</span></a> </li> 
+              </ul> 
+             </div> 
+             <div class="localSelect exchange">
+             <p class="rate" id="rateArea"> 今日汇率 $1 = 6.9元 </p> 
+             <input type="hidden" name="exchrtCrcCode" value="CNY" />
+             <!-- 注册登录 --> 
+             <input type="hidden" name="exchrtRsv1Val" value="元" /> 
+             <input type="hidden" name="crcAmt" value="6.9" /> 
+            </div> 
+            <ul class="userMenu">
+             <li><a href="#" class="log">登录</a></li>
+             <li><a href="#">注册会员</a></li>
+             <li><a href="#">我的乐天</a></li>
+             <li><a href="#">购物车</a></li>
+             <li><a href="#">客服中心</a></li>
+             <li><a href="#">收藏本站</a></li>
+            </ul> 
+        </div>
+    </div>
+    <!-- ================================================================================== -->
+    <!-- 大图标呀 -->
+    <div id="search" style="width:100%;background:#fff;z-index:999;">
+      <div class="search con">
+        <div class="search_l">
+          <a href="javascript:;"><img src="../images/log.png" /></a>
+        </div>
+        <div class="search_r">
+          <div class="search_r1">
+            匹配搜索<i></i>
+            <div class="search_r1box"> 
+             <dl> 
+              <dt>
+               商品分类
+              </dt> 
+              <dd> 
+               <ul id="category"> 
+                <span> <a href="javascript:;">护肤</a> </span> 
+                <span> <a href="javascript:;">彩妆</a> </span> 
+                <span> <a href="javascript:;">香水/美体/美发</a> </span> 
+                <span> <a href="javascript:;">箱包/钱包</a> </span> 
+                <span> <a href="javascript:;">手表/首饰</a> </span> 
+                <span> <a href="javascript:;">时尚/配件</a> </span> 
+                <span> <a href="javascript:;">数码电器</a> </span> 
+                <span> <a href="javascript:;">食品/生活</a> </span> 
+                <span> <a href="javascript:;">儿童馆</a> </span> 
+               </ul> 
+              </dd> 
+             </dl> 
+             <dl> 
+              <dt>
+                价格 
+              </dt> 
+              <dd> 
+                <span> <a href="javascript:;">低于$10 </a> </span> 
+                <span> <a href="javascript:;">$10~$50</a> </span> 
+                <span> <a href="javascript:;">$51~$100</a> </span> 
+                <span> <a href="javascript:;;">$101~$300</a> </span> 
+                <span> <a href="javascript:;">$301以上</a> </span> <br />
+                <span></span>~<span></span>
+              </dd> 
+             </dl> 
+             <dl> 
+              <dt>
+                性别 
+              </dt> 
+              <dd> 
+                <span> <a href="javascript:;;">男士</a> </span> 
+                <span> <a href="javascript:;;">女士</a> </span> 
+                <span> <a href="javascript:;;">男女兼用</a> </span> 
+                <span> <a href="javascript:;;">婴幼儿</a> </span> 
+              </dd> 
+             </dl> 
+             <dl> 
+              <dt>
+                优惠 
+              </dt> 
+              <dd> 
+                <span> <a href="javascript:;">特惠馆</a> </span> 
+                <span> <a href="javascript:;">折扣优惠</a> </span> 
+                <span> <a href="javascript:;">现金积分</a> </span> 
+                <span> <a href="javascript:;">含赠品</a> </span> 
+                <span> <a href="javascript:;">手机特价</a> </span> 
+              </dd> 
+             </dl> 
+             <p class="s1">初始化<i></i></p>
+             <p class="s2">匹配结果<i></i></p>
+          </div>
+          </div>
+          <div class="search_r2">
+            <input type="text" placeholder="时尚配件年末最后一季特价!" />
+            <i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- ================================================================================= -->
+
+
+  <div id="nav">
+    <div class="nav con">
+        <div class="nav_l">
+          <i></i><span>分类</span>
+          <div class="mainCate">
+            <ul>
+              <li><a href="#">护肤</a>
+                <div class="uu1">
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">彩妆</a>
+                <div class="uu1"></div>
+              </li>
+              <li><a href="#">香水/美体/美发</a>
+                <div class="uu1"></div>
+              </li>
+              <li><a href="#">箱包/钱包</a>
+                <div class="uu1"></div>
+              </li>
+              <li><a href="#">手表/首饰</a>
+                <div class="uu1"></div>
+              </li>
+              <li><a href="#">时尚/配件</a>
+                <div class="uu1"></div>
+              </li>
+              <li><a href="#">数码/电器</a>
+                <div class="uu1"></div>
+              </li>
+              <li><a href="#">食品/生活</a>
+                <div class="uu1"></div>
+              </li>
+              <li><a href="#">儿童管</a>
+                <div class="uu1"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    <div class="nav_c">
+      <ul>
+        <li><a href="#">畅销榜</a></li>
+        <li><a href="#">特惠管</a></li>
+        <li><a href="#">顾客优惠</a></li>
+        <li><a href="#">品牌活动</a></li>
+        <li><a href="#">PONY管</a></li>
+        <li><a href="#">#J-COS</a></li>
+      </ul>
+    </div>
+    <div class="nav_r">
+      <p><i class="nav_r1"></i></p><p>查看更多<i class="nav_r2"></i></p>
+    </div>
+        <div class="totop">
+            <img src="../images/to_top.png"/>
+        </div>
+        <div class="sidebar">
+            <img src="../images/Sidebar.png" alt="" />
+        </div>
+    </div>
+  </div>
+    <!-- =======列表页的小搜索=================================================================================== -->
+    <div id="sousou">
+      <div class="sousou con">
+        <div class="sousou_l">
+          <div class="sousou_ll"><i></i><span>首页</span></div>
+          <div class="sousou_lc"><i></i>
+            <select class="selectStyle" id="cate1">
+              <option data-shop-cnct-sct-cd="01" value="1200001">护肤</option>
+              <option data-shop-cnct-sct-cd="01" value="1200050" selected="selected">彩妆</option>
+              <option data-shop-cnct-sct-cd="01" value="1200091">香水/美体/美发</option>
+              <option data-shop-cnct-sct-cd="01" value="1200135">箱包/钱包</option>
+              <option data-shop-cnct-sct-cd="01" value="1200170">手表/首饰</option>
+              <option data-shop-cnct-sct-cd="01" value="1200192">时尚/配件</option>
+              <option data-shop-cnct-sct-cd="01" value="1200243">数码电器</option>
+              <option data-shop-cnct-sct-cd="01" value="1200266">食品/生活</option>
+              <option data-shop-cnct-sct-cd="01" value="1200345">儿童馆</option>
+            </select>
+          </div>
+          <div class="sousou_lr"><i></i>
+            <select class="selectStyle" id="cate1">
+              <option data-shop-cnct-sct-cd="01" value="1200001">彩妆</option>
+              <option data-shop-cnct-sct-cd="01" value="1200050" selected="selected">彩妆</option>
+              <option data-shop-cnct-sct-cd="01" value="1200091">香水/美体/美发</option>
+              <option data-shop-cnct-sct-cd="01" value="1200135">箱包/钱包</option>
+              <option data-shop-cnct-sct-cd="01" value="1200170">手表/首饰</option>
+              <option data-shop-cnct-sct-cd="01" value="1200192">时尚/配件</option>
+              <option data-shop-cnct-sct-cd="01" value="1200243">数码电器</option>
+              <option data-shop-cnct-sct-cd="01" value="1200266">食品/生活</option>
+              <option data-shop-cnct-sct-cd="01" value="1200345">儿童馆</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==================商品名渲染==================================================================================== -->
+    <div class="goodsName con">
+        <div class="goodsName_l">
+            <span class="goodsName2">倩碧</span>&nbsp;<span class="goodsEnglish">HSNSBFF</span>
+            <p class="goodsDetails">倩碧花漾胭脂</p>
+        </div>
+        <ul class="goodsName_r">
+                <li><a href="javascript:;">立即前往品牌装卖店<i></i></a></li>
+                <li><a href="javascript:;"><i class="gn2"></i></a></li>
+                <li><a href="javascript:;"><i class="gn3"></i></a></li>
+        </ul>    
+    </div>
+    <!-- ==========渲染图片=============================================================================================== -->
+    <div class="googsPhotos con">
+        <div class="googsPhotos_l">
+            <p class="gp1">
+                <img src="../images/111.jpg" alt="" />
+            </p>
+            <p>把鼠标放进图片查看大图</p>
+            <p><i></i><span><em>100分</em>（17）</span></p>
+        </div>
+        <div class="googsPhotos_r">
+            <!-- ============================================ -->
+            <div class="gprbox1">
+                <dl>
+                    <dt>原价</dt>
+                    <dd><span>$25</span><em>（约163元）</em></dd>
+                </dl><br />
+                <dl>
+                    <dt>现价</dt>
+                    <dd><span>$23</span><em>（约143元）</em></dd>
+                </dl>
+            </div>
+            <!-- ============================================= -->
+            <!-- ============================================ -->
+            <div class="gprbox2">
+                <dl>
+                    <dt>购物优惠</dt>
+                    <dd>
+                        <p>不可使用购物车优惠</p>
+                        <span>赠品</span>
+                        <span>查看优惠</span>
+                        <span>满购</span>
+                        <span>25%</span>
+                    </dd>
+                </dl><br />
+            </div>
+            <!-- ============================================= -->
+            <!-- ============================================ -->
+            <div class="gprbox3">
+                <dl>
+                    <dt>商品代码</dt>
+                    <dd>
+                        <span>参考代码：HIJDN-58</span>
+                        <span>商品代码：JSI-554</span>
+                    </dd>
+                </dl><br />
+            </div>
+            <!-- ============================================= -->
+            <!-- ============================================ -->
+            <div class="gprbox4">
+                <dl>
+                    <dt>颜色</dt>
+                    <dd>
+                    <span>红色</span>
+                    <span>粉色</span>
+                    <span>蓝色</span>
+                    <span>绿色</span>
+                    <span>橘色</span>
+                    </dd>
+                </dl><br />
+            </div>
+            <!-- ============================================= -->
+            <!-- ============================================ -->
+            <div class="gprbox5">
+                <dl>
+                    <dt>数量</dt>
+                    <dd>
+                       <p><button></button><input type="text" placeholder="1" /><button></button></p>
+                    </dd>
+                </dl><br />
+            </div>
+            <!-- ============================================= -->
+            <!-- ============================================ -->
+            <div class="gprbox6">
+                <p>根据公司和品牌的原因，部分积分无法使用</p>
+            </div>
+            <!-- ============================================= -->
+            <!-- ============================================ -->
+            <div class="gprbox7">
+                <p>加入购物车</p><p>立即购买</p>
+            </div>
+            <!-- ============================================= -->
+           
+        </div>
+
+    </div>
+
+ <!-- ==========利用tab切换商品详情=============================================================================== -->
+     <!-- ========================================================================================== -->
+    <div class="footerMenus con">
+        <ul>
+            <li><a href="#">商品信息</a></li>
+            <li><a href="#">商品评价</a></li>
+            <li><a href="#">退货指南</a></li>
+            <li><a href="#">取货指南</a></li>
+        </ul>
+        <div class="content">
+            <div style=""><img src="../images/tab.png"></div>
+            <div style="display:none;"><img src="../images/tab2.png"></div>
+            <div style="display:none;"><img src="../images/tab3.png"></div>
+            <div style="display:none;"><img src="../images/tab4.png"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
+        var tab = document.querySelector(".footerMenu");
+        var herder = tab.children[0].children;
+        var bodys = tab.children[1].children;
+        herder[0].className = "active";
+        bodys[0].style.display = "block";
+        for(var i=0;i<herder.length;i++){
+            herder[i].onclick=(function(idx){
+                return function(){
+                    for(var j=0;j<herder.length;j++){
+                        herder[j].className = "";
+                        bodys[j].style.display = "none";
+                    }
+                    herder[idx].className = "active";
+                    bodys[idx].style.display = "block";
+                }
+            })(i);
+        }
+    })
+    </script>
+    <!-- ============================================================================ -->
+    <!-- ==================================================================================================== -->
+  <!-- 看了还看 -->
+  <div id="hufu">
+    <div class="hufu con">
+      <p class="hufu_l">看过本商品的顾客还看了</p>
+      <p class="hufu_r">
+        <span class="kk1"> < </span>
+        <span class="kk2">1</span>/
+        <span class="kk3">5</span>
+        <span class="kk4"> > </span>
+      </p>
+    </div>
+  </div>
+    <!-- ==============看了还看================================================================================ -->
+    <div class="kankan con">
+        
+    </div>
+    <!-- ===================底部=================================================================== -->
+
+        
+        
+  <!-- ========================================================================================== -->
+  <div class="footerMenu con">
+  <ul>
+    <li><a href="#">分店介绍</a></li>
+    <li><a href="#">分店介绍</a></li>
+    <li><a href="#">分店介绍</a></li>
+    <li><a href="#">分店介绍</a></li>
+  </ul>
+  </div>
+  <!-- ===============底部截图=========================================================================== -->
+  <div id="footer1">
+    <div class="footer1 con">
+      <img src="../images/footer1.png" alt="" />
+    </div>
+  </div>
+  <!-- ===============底部截图2=========================================================================== -->
+  <div id="footer2">
+    <div class="footer2 con">
+      <img src="../images/footer2.png" alt="" />
+    </div>
+  </div>
+</body>
+</html>

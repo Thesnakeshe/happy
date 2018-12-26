@@ -1,0 +1,611 @@
+#sousou {
+  height: 78px;
+}
+
+.sousou {
+  height: 78px;
+  padding-top: 20px;
+}
+
+.sousou .sousou_l .sousou_ll {
+  width: 43px;
+  height: 20px;
+  float: left;
+}
+
+.sousou .sousou_l .sousou_ll span {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.sousou .sousou_l .sousou_ll i {
+  display: inline-block;
+  position: relative;
+  right: -1px;
+  top: 5px;
+  padding-right: 5px;
+  width: 19px;
+  height: 16px;
+  background: url(../images/bg_icon.png) no-repeat -30px 0px;
+}
+
+.sousou .sousou_l .sousou_lc {
+  float: left;
+}
+
+.sousou .sousou_l .sousou_lc i {
+  display: inline-block;
+  position: relative;
+  right: -10px;
+  top: 8px;
+  padding: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/bg_direct.png) no-repeat -20px 0px;
+}
+
+.sousou .sousou_l .sousou_lc select {
+  color: #ccc;
+  height: 30px;
+}
+
+.sousou .sousou_l .sousou_lr {
+  float: left;
+}
+
+.sousou .sousou_l .sousou_lr i {
+  display: inline-block;
+  position: relative;
+  right: -10px;
+  top: 8px;
+  padding: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/bg_direct.png) no-repeat -20px 0px;
+}
+
+.sousou .sousou_l .sousou_lr select {
+  color: #ccc;
+  height: 30px;
+}
+
+.sousou .sousou_r {
+  float: right;
+}
+
+.sousou .sousou_r input {
+  width: 230px;
+  height: 33px;
+  border: 1px solid #ccc;
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+
+.sousou .sousou_r button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  background: #F7F9FD;
+  position: relative;
+  right: 2px;
+  top: 10px;
+}
+
+.sousou .sousou_r button i {
+  display: inline-block;
+  position: relative;
+  right: -7px;
+  top: 8px;
+  padding: 5px;
+  width: 28px;
+  height: 28px;
+  background: url(../images/bg_icon.png) no-repeat -2219px 0px;
+}
+
+.goodsName {
+  height: 94px;
+}
+
+.goodsName .goodsName_l {
+  float: left;
+  width: 240px;
+  height: 94px;
+}
+
+.goodsName .goodsName_l span {
+  padding: 2px 3px 10px 0px;
+  font-size: 20px;
+}
+
+.goodsName .goodsName_l p {
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+.goodsName .goodsName_r {
+  float: right;
+  width: 241px;
+  height: 94px;
+  padding-top: 30px;
+}
+
+.goodsName .goodsName_r li {
+  float: left;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  padding-left: 1px;
+  margin-right: 5px;
+}
+
+.goodsName .goodsName_r li:nth-child(1) {
+  width: 136px;
+}
+
+.goodsName .goodsName_r li a {
+  font-size: 12px;
+  color: #000;
+}
+
+.goodsName .goodsName_r li a i {
+  display: inline-block;
+  position: relative;
+  right: 6px;
+  top: 8px;
+  margin-left: 10px;
+  padding-right: 5px;
+  width: 8px;
+  height: 16px;
+  background: url(../images/bg_icon.png) no-repeat -239px -71px;
+}
+
+.goodsName .goodsName_r li a .gn2 {
+  display: inline-block;
+  position: relative;
+  right: 11px;
+  top: -1px;
+  margin-left: 10px;
+  padding-right: 5px;
+  width: 38px;
+  height: 38px;
+  background: url(../images/bg_icon2.png) no-repeat -1861px 0;
+}
+
+.goodsName .goodsName_r li a .gn3 {
+  display: inline-block;
+  position: relative;
+  right: 12px;
+  top: -1px;
+  margin-left: 10px;
+  padding-right: 5px;
+  width: 38px;
+  height: 38px;
+  background: url(../images/bg_icon2.png) no-repeat -1980px 0;
+}
+
+.googsPhotos {
+  height: 692px;
+  margin-bottom: 67px;
+}
+
+.googsPhotos .googsPhotos_l {
+  width: 500px;
+  height: 692px;
+  text-align: center;
+  float: left;
+}
+
+.googsPhotos .googsPhotos_l p {
+  padding-left: 34px;
+  padding-top: 58px;
+}
+
+.googsPhotos .googsPhotos_l p img {
+  width: 381px;
+}
+
+.googsPhotos .googsPhotos_l p:nth-child(2) {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.googsPhotos .googsPhotos_l p:nth-child(3) i {
+  display: inline-block;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  padding: 5px;
+  width: 78px;
+  height: 18px;
+  background: url(../images/bg_review.png) no-repeat 0px -13px;
+}
+
+.googsPhotos .googsPhotos_l p:nth-child(3) em {
+  font-size: 18px;
+  color: #DA291C;
+  font-weight: 900;
+}
+
+.googsPhotos .googsPhotos_l p:nth-child(3) span {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.googsPhotos .googsPhotos_r {
+  float: right;
+  width: 520px;
+  height: 692px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox1 {
+  width: 520px;
+  height: 226px;
+  padding: 82px 0px 0px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.googsPhotos .googsPhotos_r .gprbox1 dl {
+  height: 57px;
+  width: 520px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox1 dl dt {
+  float: left;
+  height: 51px;
+  width: 142px;
+  font-size: 14px;
+  line-height: 51px;
+  padding-left: 20px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox1 dl dd {
+  float: left;
+}
+
+.googsPhotos .googsPhotos_r .gprbox1 dl dd span {
+  height: 51px;
+  width: 142px;
+  font-size: 37px;
+  font-weight: 900;
+  line-height: 51px;
+  text-align: center;
+}
+
+.googsPhotos .googsPhotos_r .gprbox1 dl dd em {
+  color: #ccc;
+}
+
+.googsPhotos .googsPhotos_r .gprbox2 {
+  width: 520px;
+  height: 110px;
+  border-bottom: 1px solid #ccc;
+}
+
+.googsPhotos .googsPhotos_r .gprbox2 dl {
+  height: 57px;
+  width: 520px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox2 dl dt {
+  float: left;
+  height: 110px;
+  width: 142px;
+  font-size: 14px;
+  line-height: 51px;
+  padding-left: 20px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox2 dl dd {
+  float: left;
+  height: 110px;
+  width: 376px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox2 dl dd p {
+  height: 47px;
+  width: 300px;
+  font-size: 14px;
+  padding-top: 20px;
+  float: left;
+}
+
+.googsPhotos .googsPhotos_r .gprbox2 dl dd span {
+  display: block;
+  height: 30px;
+  float: left;
+  font-size: 14px;
+  width: 142px;
+  color: #ccc;
+  line-height: 29px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox3 {
+  width: 520px;
+  height: 43px;
+  border-bottom: 1px solid #ccc;
+}
+
+.googsPhotos .googsPhotos_r .gprbox3 dl {
+  height: 43px;
+  width: 520px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox3 dl dt {
+  float: left;
+  height: 43px;
+  width: 142px;
+  font-size: 14px;
+  line-height: 51px;
+  padding-left: 20px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox3 dl dd {
+  float: left;
+  height: 43px;
+  width: 376px;
+  padding-top: 10px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox3 dl dd span {
+  display: block;
+  height: 30px;
+  float: left;
+  font-size: 14px;
+  width: 142px;
+  color: #ccc;
+  line-height: 29px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox4 {
+  width: 520px;
+  height: 88px;
+  border-bottom: 1px solid #ccc;
+}
+
+.googsPhotos .googsPhotos_r .gprbox4 dl {
+  height: 88px;
+  width: 520px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox4 dl dt {
+  float: left;
+  height: 88px;
+  width: 142px;
+  font-size: 14px;
+  line-height: 51px;
+  padding-left: 20px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox4 dl dd {
+  float: left;
+  height: 88px;
+  width: 376px;
+  padding-top: 10px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox4 dl dd span {
+  display: block;
+  height: 40px;
+  float: left;
+  font-size: 14px;
+  width: 40px;
+  color: #ccc;
+  line-height: 29px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox5 {
+  width: 520px;
+  height: 88px;
+  border-bottom: 1px solid #ccc;
+}
+
+.googsPhotos .googsPhotos_r .gprbox5 dl {
+  height: 88px;
+  width: 520px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox5 dl dt {
+  float: left;
+  height: 88px;
+  width: 142px;
+  font-size: 14px;
+  line-height: 51px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox5 dl dd {
+  float: left;
+  height: 88px;
+  width: 376px;
+  padding-top: 10px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox5 dl dd p {
+  position: relative;
+  top: 15px;
+  left: 0px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox5 dl dd p button {
+  width: 28px;
+  height: 29px;
+  background: pink;
+  background: url(../images/bg_btn.png) no-repeat -1289px 0px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox5 dl dd p button:last-child {
+  background: url(../images/bg_btn.png) no-repeat -1320px 0px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox5 dl dd p input {
+  height: 28px;
+  width: 59px;
+  position: relative;
+  top: -11px;
+  left: 0px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-left: 5px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox6 {
+  height: 76px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox6 p {
+  font-size: 14px;
+  padding: 20px 0px 0px 20px;
+  color: #ccc;
+}
+
+.googsPhotos .googsPhotos_r .gprbox7 {
+  height: 60px;
+}
+
+.googsPhotos .googsPhotos_r .gprbox7 p {
+  float: left;
+  height: 60px;
+  width: 257px;
+  margin-right: 3px;
+  border: 2px solid #E60F0D;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+  color: #E60F0D;
+}
+
+.googsPhotos .googsPhotos_r .gprbox7 p:last-child {
+  background: #E60F0D;
+  color: #fff;
+}
+
+.footerMenus {
+  height: 1160px;
+}
+
+.footerMenus ul .active {
+  border: 1px solid red;
+  border-top: 2px solid red;
+  border-bottom: none;
+}
+
+.footerMenus ul li {
+  float: left;
+  height: 60px;
+  width: 25%;
+  text-align: center;
+  background: #F7F9FD;
+  border-bottom: 1px solid red;
+}
+
+.footerMenus ul li a {
+  font-size: 14px;
+  color: #000;
+  line-height: 60px;
+  text-align: center;
+}
+
+#hufu {
+  height: 45px;
+}
+
+.hufu {
+  height: 45px;
+}
+
+.hufu .hufu_l {
+  float: left;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.hufu .hufu_r {
+  float: right;
+  display: block;
+  width: 99px;
+  height: 30px;
+  position: relative;
+  right: 0px;
+  top: 9px;
+  padding: 3px 10px;
+  font-size: 16px;
+  color: #C5C5C5;
+}
+
+.hufu .hufu_r .kk1 {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+
+.hufu .hufu_r .kk4 {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+
+.hufu .hufu_r .kk2 {
+  color: red;
+}
+
+.hufu .hufu_r i {
+  display: inline-block;
+  position: relative;
+  right: 0px;
+  top: 7px;
+  margin-left: 10px;
+  padding-right: 5px;
+  width: 3px;
+  height: 16px;
+  background: url(../images/bg_icon3.png) no-repeat -658px 0px;
+}
+
+.kankan {
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 67px;
+}
+
+.kankan div {
+  position: relative;
+  width: 255px;
+  border: 1px solid #ccc;
+  float: left;
+  height: 100%;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.kankan div img {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+
+.kankan div p {
+  margin-bottom: 10px;
+}
+
+.kankan div p:nth-child(3) {
+  color: #9A9A9A;
+}
+
+.kankan div p .goodsyan {
+  color: red;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.kankan div p .goodsxiao {
+  color: #9A9A9A;
+  font-size: 14px;
+}

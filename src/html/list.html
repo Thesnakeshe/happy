@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>list</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/first.css" />
+    <link rel="stylesheet" type="text/css" href="../css/list.css" />
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="../js/list.js"></script>
+</head>
+<body>
+
+    <div id="headers">
+        <div class="headers con">
+             <!-- 顶格的 机场--> 
+             <div class="localSelect airport">
+             <p><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></p>
+             <ul class="air1" style="display:none">
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
+                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li> 
+              </ul> 
+             </div> 
+             <!-- 语言 --> 
+             <div class="localSelect lang" id="langArea"> 
+              <p class="selected" id="lang"><span><i class="i1"></i> 简体中文</span></p> 
+              <ul class="lang1" style="display:none"> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> 한국어</span> </a> </li> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> 简体中文</span></a> </li> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> 日本語</span></a> </li> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> English</span></a> </li> 
+               <li> <a href="javascript:;"> <span><i class="i1"></i> 繁體中文</span></a> </li> 
+              </ul> 
+             </div> 
+             <!-- 汇率 --> 
+             <div class="localSelect money" id="moneyArea"> 
+              <p class="selected" id="money"> <a href="javascript:;"> <span>CNY(元)</span></a> </p> 
+              <ul style="display:none;"> 
+               <li> <a href="javascript:;"> <span>CNY(元)</span></a> </li> 
+               <li> <a href="javascript:;"> <span>KRW(₩)</span></a> </li> 
+              </ul> 
+             </div> 
+             <div class="localSelect exchange">
+             <p class="rate" id="rateArea"> 今日汇率 $1 = 6.9元 </p> 
+             <input type="hidden" name="exchrtCrcCode" value="CNY" />
+             <!-- 注册登录 --> 
+             <input type="hidden" name="exchrtRsv1Val" value="元" /> 
+             <input type="hidden" name="crcAmt" value="6.9" /> 
+            </div> 
+            <ul class="userMenu">
+             <li><a href="#" class="log">登录</a></li>
+             <li><a href="#">注册会员</a></li>
+             <li><a href="#">我的乐天</a></li>
+             <li><a href="#">购物车</a></li>
+             <li><a href="#">客服中心</a></li>
+             <li><a href="#">收藏本站</a></li>
+            </ul> 
+        </div>
+    </div>
+    <!-- ================================================================================== -->
+    <!-- 大图标呀 -->
+    <div id="search">
+      <div class="search con">
+        <div class="search_l">
+          <a href="javascript:;"><img src="../images/log.png" /></a>
+        </div>
+        <div class="search_r">
+          <div class="search_r1">
+            匹配搜索<i></i>
+            <div class="search_r1box"> 
+             <dl> 
+              <dt>
+               商品分类
+              </dt> 
+              <dd> 
+               <ul id="category"> 
+                <span> <a href="javascript:;">护肤</a> </span> 
+                <span> <a href="javascript:;">彩妆</a> </span> 
+                <span> <a href="javascript:;">香水/美体/美发</a> </span> 
+                <span> <a href="javascript:;">箱包/钱包</a> </span> 
+                <span> <a href="javascript:;">手表/首饰</a> </span> 
+                <span> <a href="javascript:;">时尚/配件</a> </span> 
+                <span> <a href="javascript:;">数码电器</a> </span> 
+                <span> <a href="javascript:;">食品/生活</a> </span> 
+                <span> <a href="javascript:;">儿童馆</a> </span> 
+               </ul> 
+              </dd> 
+             </dl> 
+             <dl> 
+              <dt>
+                价格 
+              </dt> 
+              <dd> 
+                <span> <a href="javascript:;">低于$10 </a> </span> 
+                <span> <a href="javascript:;">$10~$50</a> </span> 
+                <span> <a href="javascript:;">$51~$100</a> </span> 
+                <span> <a href="javascript:;;">$101~$300</a> </span> 
+                <span> <a href="javascript:;">$301以上</a> </span> <br />
+                <span></span>~<span></span>
+              </dd> 
+             </dl> 
+             <dl> 
+              <dt>
+                性别 
+              </dt> 
+              <dd> 
+                <span> <a href="javascript:;;">男士</a> </span> 
+                <span> <a href="javascript:;;">女士</a> </span> 
+                <span> <a href="javascript:;;">男女兼用</a> </span> 
+                <span> <a href="javascript:;;">婴幼儿</a> </span> 
+              </dd> 
+             </dl> 
+             <dl> 
+              <dt>
+                优惠 
+              </dt> 
+              <dd> 
+                <span> <a href="javascript:;">特惠馆</a> </span> 
+                <span> <a href="javascript:;">折扣优惠</a> </span> 
+                <span> <a href="javascript:;">现金积分</a> </span> 
+                <span> <a href="javascript:;">含赠品</a> </span> 
+                <span> <a href="javascript:;">手机特价</a> </span> 
+              </dd> 
+             </dl> 
+             <p class="s1">初始化<i></i></p>
+             <p class="s2">匹配结果<i></i></p>
+          </div>
+          </div>
+          <div class="search_r2">
+            <input type="text" placeholder="时尚配件年末最后一季特价!" />
+            <i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- ================================================================================= -->
+
+
+  <div id="nav">
+    <div class="nav con">
+    <div class="nav_l">
+      <i></i><span>分类</span>
+      <div class="mainCate">
+        <ul>
+          <li><a href="#">护肤</a>
+            <div class="uu1">
+              <div class="list">
+                  <ul>
+                    <li class="listFirst"><a href="#">洗面</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                  </ul>
+                  <ul>
+                    <li class="listFirst"><a href="#">洗面</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                  </ul>
+                  <ul>
+                    <li class="listFirst"><a href="#">洗面</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                  </ul>
+                  <ul>
+                    <li class="listFirst"><a href="#">洗面</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                  </ul>
+                  <ul>
+                    <li class="listFirst"><a href="#">洗面</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                  </ul>
+                  <ul>
+                    <li class="listFirst"><a href="#">洗面</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                  </ul>
+                  <ul>
+                    <li class="listFirst"><a href="#">洗面</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                    <li><a href="#">洗面奶</a></li>
+                  </ul>
+              </div>
+              <div class="listImg"><img src="images/nav1.png"/></div>
+            </div>
+          </li>
+          <li><a href="#">彩妆</a>
+            <div class="uu1"></div>
+          </li>
+          <li><a href="#">香水/美体/美发</a>
+            <div class="uu1"></div>
+          </li>
+          <li><a href="#">箱包/钱包</a>
+            <div class="uu1"></div>
+          </li>
+          <li><a href="#">手表/首饰</a>
+            <div class="uu1"></div>
+          </li>
+          <li><a href="#">时尚/配件</a>
+            <div class="uu1"></div>
+          </li>
+          <li><a href="#">数码/电器</a>
+            <div class="uu1"></div>
+          </li>
+          <li><a href="#">食品/生活</a>
+            <div class="uu1"></div>
+          </li>
+          <li><a href="#">儿童管</a>
+            <div class="uu1"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav_c">
+      <ul>
+        <li><a href="#">畅销榜</a></li>
+        <li><a href="#">特惠管</a></li>
+        <li><a href="#">顾客优惠</a></li>
+        <li><a href="#">品牌活动</a></li>
+        <li><a href="#">PONY管</a></li>
+        <li><a href="#">#J-COS</a></li>
+      </ul>
+    </div>
+    <div class="nav_r">
+      <p><i class="nav_r1"></i></p><p>查看更多<i class="nav_r2"></i></p>
+    </div>
+        <div class="totop">
+            <img src="../images/to_top.png"/>
+        </div>
+        <div class="sidebar">
+            <img src="../images/Sidebar.png" alt="" />
+        </div>
+    </div>
+  </div>
+    <!-- =======列表页的小搜索=================================================================================== -->
+    <div id="sousou">
+      <div class="sousou con">
+        <div class="sousou_l">
+          <div class="sousou_ll"><i></i><span>首页</span></div>
+          <div class="sousou_lc"><i></i>
+            <select class="selectStyle" id="cate1">
+              <option data-shop-cnct-sct-cd="01" value="1200001">护肤</option>
+              <option data-shop-cnct-sct-cd="01" value="1200050" selected="selected">彩妆</option>
+              <option data-shop-cnct-sct-cd="01" value="1200091">香水/美体/美发</option>
+              <option data-shop-cnct-sct-cd="01" value="1200135">箱包/钱包</option>
+              <option data-shop-cnct-sct-cd="01" value="1200170">手表/首饰</option>
+              <option data-shop-cnct-sct-cd="01" value="1200192">时尚/配件</option>
+              <option data-shop-cnct-sct-cd="01" value="1200243">数码电器</option>
+              <option data-shop-cnct-sct-cd="01" value="1200266">食品/生活</option>
+              <option data-shop-cnct-sct-cd="01" value="1200345">儿童馆</option>
+            </select>
+          </div>
+          <div class="sousou_lr"><i></i>
+            <select class="selectStyle" id="cate1">
+              <option data-shop-cnct-sct-cd="01" value="1200001">彩妆</option>
+              <option data-shop-cnct-sct-cd="01" value="1200050" selected="selected">彩妆</option>
+              <option data-shop-cnct-sct-cd="01" value="1200091">香水/美体/美发</option>
+              <option data-shop-cnct-sct-cd="01" value="1200135">箱包/钱包</option>
+              <option data-shop-cnct-sct-cd="01" value="1200170">手表/首饰</option>
+              <option data-shop-cnct-sct-cd="01" value="1200192">时尚/配件</option>
+              <option data-shop-cnct-sct-cd="01" value="1200243">数码电器</option>
+              <option data-shop-cnct-sct-cd="01" value="1200266">食品/生活</option>
+              <option data-shop-cnct-sct-cd="01" value="1200345">儿童馆</option>
+            </select>
+
+          </div>
+        </div>
+        <div class="sousou_r">
+          <input type="text" placeholder="在该分类中搜索" />
+          <button><i></i></button>
+        </div>
+      </div>
+    </div>
+    <!-- =========底妆================================================================== -->
+    <div class="dizhuang con">
+      底妆
+    </div>
+    <!-- ===================================================================================== -->
+    <div class="dzmeun con">
+      <ul>
+        <li><i></i><a href="#">妆前乳/隔离/防晒</a></li>
+        <li><i></i><a href="#">妆前乳/隔离/防晒</a></li>
+        <li><i></i><a href="#">妆前乳/隔离/防晒</a></li>
+        <li><i></i><a href="#">妆前乳/隔离/防晒</a></li>
+        <li><i></i><a href="#">妆前乳/隔离/防晒</a></li>
+        <li><i></i><a href="#">妆前乳/隔离/防晒</a></li>
+        <li><i></i><a href="#">妆前乳/隔离/防晒</a></li>
+        <li><i></i><a href="#">妆前乳/隔离/防晒</a></li>
+      </ul>
+    </div>
+    <!-- ==========底妆可选择的菜单=========================================================================== -->
+    <div class="dzmeun2 con">
+    <dl>
+      <dt>商品分类</dt>
+      <dd>
+      <div class="checkboxGroup point">
+      <input id="cate_all" type="checkbox" name="cateCheck" value="1200051" checked="">
+      <label for="cate_all"><span>全部</span><!-- 전체 --></label>
+      <input id="c1200052" type="checkbox" name="cateCheck" value="1200052" onclick="javascript:searchCateOption(this, 'BB/CC霜')">
+      <label for="c1200052"><span>BB/CC霜</span></label>
+      <input id="c1200058" type="checkbox" name="cateCheck" value="1200058" onclick="javascript:searchCateOption(this, '粉底液')">
+      <label for="c1200058"><span>粉底液</span></label>
+      <input id="c1200056" type="checkbox" name="cateCheck" value="1200056" onclick="javascript:searchCateOption(this, '两用粉饼/粉饼')">
+      <label for="c1200056"><span>两用粉饼/粉饼</span></label>
+      <input id="c1200054" type="checkbox" name="cateCheck" value="1200054" onclick="javascript:searchCateOption(this, '蜜粉')">
+      <label for="c1200054"><span>蜜粉</span></label>
+      <input id="c1200057" type="checkbox" name="cateCheck" value="1200057" onclick="javascript:searchCateOption(this, '气垫粉')">
+      <label for="c1200057"><span>气垫粉</span></label>
+      <input id="c1200059" type="checkbox" name="cateCheck" value="1200059" onclick="javascript:searchCateOption(this, '阴影/腮红/高光')">
+      <label for="c1200059"><span>阴影/腮红/高光</span></label>
+      <input id="c1200053" type="checkbox" name="cateCheck" value="1200053" onclick="javascript:searchCateOption(this, '妆前乳/隔离霜')">
+      <label for="c1200053"><span>妆前乳/隔离霜</span></label>
+      <input id="c1200055" type="checkbox" name="cateCheck" value="1200055" onclick="javascript:searchCateOption(this, '遮瑕膏')">
+      <label for="c1200055"><span>遮瑕膏</span></label>
+      </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>商品分类</dt>
+      <dd>
+      <div class="checkboxGroup point">
+      <input id="c1200052" type="checkbox" name="cateCheck" value="1200052" onclick="javascript:searchCateOption(this, 'BB/CC霜')">
+      <label for="c1200052"><span>BB/CC霜</span></label>
+      <input id="c1200058" type="checkbox" name="cateCheck" value="1200058" onclick="javascript:searchCateOption(this, '粉底液')">
+      <label for="c1200058"><span>粉底液</span></label>
+      <input id="c1200056" type="checkbox" name="cateCheck" value="1200056" onclick="javascript:searchCateOption(this, '两用粉饼/粉饼')">
+      <label for="c1200056"><span>两用粉饼/粉饼</span></label>
+      <input id="c1200054" type="checkbox" name="cateCheck" value="1200054" onclick="javascript:searchCateOption(this, '蜜粉')">
+      <label for="c1200054"><span>蜜粉</span></label>
+      <input id="c1200057" type="checkbox" name="cateCheck" value="1200057" onclick="javascript:searchCateOption(this, '气垫粉')">
+      <label for="c1200057"><span>气垫粉</span></label>
+      <input id="c1200059" type="checkbox" name="cateCheck" value="1200059" onclick="javascript:searchCateOption(this, '阴影/腮红/高光')">
+      <label for="c1200059"><span>阴影/腮红/高光</span></label>
+      <input id="c1200053" type="checkbox" name="cateCheck" value="1200053" onclick="javascript:searchCateOption(this, '妆前乳/隔离霜')">
+      <label for="c1200053"><span>妆前乳/隔离霜</span></label>
+      <input id="c1200055" type="checkbox" name="cateCheck" value="1200055" onclick="javascript:searchCateOption(this, '遮瑕膏')">
+      <label for="c1200055"><span>遮瑕膏</span></label>
+      </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>商品分类</dt>
+      <dd>
+      <div class="checkboxGroup point">
+      <input id="c1200052" type="checkbox" name="cateCheck" value="1200052" onclick="javascript:searchCateOption(this, 'BB/CC霜')">
+      <label for="c1200052"><span>BB/CC霜</span></label>
+      <input id="c1200058" type="checkbox" name="cateCheck" value="1200058" onclick="javascript:searchCateOption(this, '粉底液')">
+      <label for="c1200058"><span>粉底液</span></label>
+      <input id="c1200056" type="checkbox" name="cateCheck" value="1200056" onclick="javascript:searchCateOption(this, '两用粉饼/粉饼')">
+      <label for="c1200056"><span>两用粉饼/粉饼</span></label>
+      <input id="c1200054" type="checkbox" name="cateCheck" value="1200054" onclick="javascript:searchCateOption(this, '蜜粉')">
+      <label for="c1200054"><span>蜜粉</span></label>
+      <input id="c1200057" type="checkbox" name="cateCheck" value="1200057" onclick="javascript:searchCateOption(this, '气垫粉')">
+      <label for="c1200057"><span>气垫粉</span></label>
+      <input id="c1200059" type="checkbox" name="cateCheck" value="1200059" onclick="javascript:searchCateOption(this, '阴影/腮红/高光')">
+      <label for="c1200059"><span>阴影/腮红/高光</span></label>
+      <input id="c1200053" type="checkbox" name="cateCheck" value="1200053" onclick="javascript:searchCateOption(this, '妆前乳/隔离霜')">
+      <label for="c1200053"><span>妆前乳/隔离霜</span></label>
+      <input id="c1200055" type="checkbox" name="cateCheck" value="1200055" onclick="javascript:searchCateOption(this, '遮瑕膏')">
+      <label for="c1200055"><span>遮瑕膏</span></label>
+      </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>商品分类</dt>
+      <dd>
+      <div class="checkboxGroup point">
+      <input id="c1200052" type="checkbox" name="cateCheck" value="1200052" onclick="javascript:searchCateOption(this, 'BB/CC霜')">
+      <label for="c1200052"><span>BB/CC霜</span></label>
+      <input id="c1200058" type="checkbox" name="cateCheck" value="1200058" onclick="javascript:searchCateOption(this, '粉底液')">
+      <label for="c1200058"><span>粉底液</span></label>
+      <input id="c1200056" type="checkbox" name="cateCheck" value="1200056" onclick="javascript:searchCateOption(this, '两用粉饼/粉饼')">
+      <label for="c1200056"><span>两用粉饼/粉饼</span></label>
+      <input id="c1200054" type="checkbox" name="cateCheck" value="1200054" onclick="javascript:searchCateOption(this, '蜜粉')">
+      <label for="c1200054"><span>蜜粉</span></label>
+      <input id="c1200057" type="checkbox" name="cateCheck" value="1200057" onclick="javascript:searchCateOption(this, '气垫粉')">
+      <label for="c1200057"><span>气垫粉</span></label>
+      <input id="c1200059" type="checkbox" name="cateCheck" value="1200059" onclick="javascript:searchCateOption(this, '阴影/腮红/高光')">
+      <label for="c1200059"><span>阴影/腮红/高光</span></label>
+      <input id="c1200053" type="checkbox" name="cateCheck" value="1200053" onclick="javascript:searchCateOption(this, '妆前乳/隔离霜')">
+      <label for="c1200053"><span>妆前乳/隔离霜</span></label>
+      <input id="c1200055" type="checkbox" name="cateCheck" value="1200055" onclick="javascript:searchCateOption(this, '遮瑕膏')">
+      <label for="c1200055"><span>遮瑕膏</span></label>
+      </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>商品分类</dt>
+      <dd>
+      <div class="checkboxGroup point">
+      <input id="c1200052" type="checkbox" name="cateCheck" value="1200052" onclick="javascript:searchCateOption(this, 'BB/CC霜')">
+      <label for="c1200052"><span>BB/CC霜</span></label>
+      <input id="c1200058" type="checkbox" name="cateCheck" value="1200058" onclick="javascript:searchCateOption(this, '粉底液')">
+      <label for="c1200058"><span>粉底液</span></label>
+      <input id="c1200056" type="checkbox" name="cateCheck" value="1200056" onclick="javascript:searchCateOption(this, '两用粉饼/粉饼')">
+      <label for="c1200056"><span>两用粉饼/粉饼</span></label>
+      <input id="c1200054" type="checkbox" name="cateCheck" value="1200054" onclick="javascript:searchCateOption(this, '蜜粉')">
+      <label for="c1200054"><span>蜜粉</span></label>
+      <input id="c1200057" type="checkbox" name="cateCheck" value="1200057" onclick="javascript:searchCateOption(this, '气垫粉')">
+      <label for="c1200057"><span>气垫粉</span></label>
+      <input id="c1200059" type="checkbox" name="cateCheck" value="1200059" onclick="javascript:searchCateOption(this, '阴影/腮红/高光')">
+      <label for="c1200059"><span>阴影/腮红/高光</span></label>
+      <input id="c1200053" type="checkbox" name="cateCheck" value="1200053" onclick="javascript:searchCateOption(this, '妆前乳/隔离霜')">
+      <label for="c1200053"><span>妆前乳/隔离霜</span></label>
+      <input id="c1200055" type="checkbox" name="cateCheck" value="1200055" onclick="javascript:searchCateOption(this, '遮瑕膏')">
+      <label for="c1200055"><span>遮瑕膏</span></label>
+      </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>商品分类</dt>
+      <dd>
+      <div class="checkboxGroup point">
+      <input id="c1200052" type="checkbox" name="cateCheck" value="1200052" onclick="javascript:searchCateOption(this, 'BB/CC霜')">
+      <label for="c1200052"><span>BB/CC霜</span></label>
+      <input id="c1200058" type="checkbox" name="cateCheck" value="1200058" onclick="javascript:searchCateOption(this, '粉底液')">
+      <label for="c1200058"><span>粉底液</span></label>
+      <input id="c1200056" type="checkbox" name="cateCheck" value="1200056" onclick="javascript:searchCateOption(this, '两用粉饼/粉饼')">
+      <label for="c1200056"><span>两用粉饼/粉饼</span></label>
+      <input id="c1200054" type="checkbox" name="cateCheck" value="1200054" onclick="javascript:searchCateOption(this, '蜜粉')">
+      <label for="c1200054"><span>蜜粉</span></label>
+      <input id="c1200057" type="checkbox" name="cateCheck" value="1200057" onclick="javascript:searchCateOption(this, '气垫粉')">
+      <label for="c1200057"><span>气垫粉</span></label>
+      <input id="c1200059" type="checkbox" name="cateCheck" value="1200059" onclick="javascript:searchCateOption(this, '阴影/腮红/高光')">
+      <label for="c1200059"><span>阴影/腮红/高光</span></label>
+      <input id="c1200053" type="checkbox" name="cateCheck" value="1200053" onclick="javascript:searchCateOption(this, '妆前乳/隔离霜')">
+      <label for="c1200053"><span>妆前乳/隔离霜</span></label>
+      <input id="c1200055" type="checkbox" name="cateCheck" value="1200055" onclick="javascript:searchCateOption(this, '遮瑕膏')">
+      <label for="c1200055"><span>遮瑕膏</span></label>
+      </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>商品分类</dt>
+      <dd>
+      <div class="checkboxGroup point">
+      <input id="c1200052" type="checkbox" name="cateCheck" value="1200052" onclick="javascript:searchCateOption(this, 'BB/CC霜')">
+      <label for="c1200052"><span>BB/CC霜</span></label>
+      <input id="c1200058" type="checkbox" name="cateCheck" value="1200058" onclick="javascript:searchCateOption(this, '粉底液')">
+      <label for="c1200058"><span>粉底液</span></label>
+      <input id="c1200056" type="checkbox" name="cateCheck" value="1200056" onclick="javascript:searchCateOption(this, '两用粉饼/粉饼')">
+      <label for="c1200056"><span>两用粉饼/粉饼</span></label>
+      <input id="c1200054" type="checkbox" name="cateCheck" value="1200054" onclick="javascript:searchCateOption(this, '蜜粉')">
+      <label for="c1200054"><span>蜜粉</span></label>
+      <input id="c1200057" type="checkbox" name="cateCheck" value="1200057" onclick="javascript:searchCateOption(this, '气垫粉')">
+      <label for="c1200057"><span>气垫粉</span></label>
+      <input id="c1200059" type="checkbox" name="cateCheck" value="1200059" onclick="javascript:searchCateOption(this, '阴影/腮红/高光')">
+      <label for="c1200059"><span>阴影/腮红/高光</span></label>
+      <input id="c1200053" type="checkbox" name="cateCheck" value="1200053" onclick="javascript:searchCateOption(this, '妆前乳/隔离霜')">
+      <label for="c1200053"><span>妆前乳/隔离霜</span></label>
+      <input id="c1200055" type="checkbox" name="cateCheck" value="1200055" onclick="javascript:searchCateOption(this, '遮瑕膏')">
+      <label for="c1200055"><span>遮瑕膏</span></label>
+      </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>断货除外</dt>
+      <dd>
+      <div class="checkboxGroup point">
+      <input id="c1200055" type="checkbox" name="cateCheck" value="1200055" onclick="javascript:searchCateOption(this, '遮瑕膏')">
+      <label for="c1200055"><span>断货除外</span></label>
+      </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>所选属性</dt>
+    </dl>
+    </div>
+    <!-- =======重置提交按钮==================================================================== -->
+  <div class="chongzhi con">
+  <span>初始化</span><span>搜索</span>
+  </div>
+  <!-- =========列表的排序等=========================================================================================== -->
+  <div class="paixu con">
+    <span>共<em style="color:red;">2,365</em>件</span>
+    <ul>
+      <li class="dijia"><a href="javascript:;">按低价排序</a></li>
+      <li class="gaojia"><a href="javascript:;">按高价排序</a></li>
+      <li class="dijia"><a href="javascript:;">按低价排序</a></li>
+      <li class="gaojia"><a href="javascript:;">按高价排序</a></li>
+      <li class="dijia"><a href="javascript:;">按低价排序</a></li>
+      <li class="gaojia"><a href="javascript:;">按高价排序</a></li>
+      <li class="dijia"><a href="javascript:;">按低价排序</a></li>
+    </ul>
+    <p>
+      <button></button>
+      <button></button>
+      <select class="selectStyle" id="cate1">
+        <option data-shop-cnct-sct-cd="01" value="1200001">60</option>
+        <option data-shop-cnct-sct-cd="01" value="1200050" selected="selected">80</option>
+        <option data-shop-cnct-sct-cd="01" value="1200091">100</option>
+        <option data-shop-cnct-sct-cd="01" value="1200135">120</option>
+        <option data-shop-cnct-sct-cd="01" value="1200170">140</option>
+      </select>
+    </p>
+  </div>
+  <!-- =============商品列表================================================================== -->
+  <main class="mains con">
+      <div class="mainBox">
+        <div class="mainBoxs">
+          <img src="../images/img2.jpg" alt="" />
+          <div>
+            <p>name  <em> english</em> </p>
+            <p>sidfhuhwufudfud</p>
+            <p><em>$25</em>9.5折</p>
+            <p>$24 <em>约85元</em></p>
+            <p><i></i><em>(58852)</em></p>
+          </div>
+        </div>
+      </div>
+      <div class="page">
+      </div>
+  </main>
+        
+        
+  <!-- ========================================================================================== -->
+  <div class="footerMenu con">
+  <ul>
+    <li><a href="#">分店介绍</a></li>
+    <li><a href="#">分店介绍</a></li>
+    <li><a href="#">分店介绍</a></li>
+    <li><a href="#">分店介绍</a></li>
+  </ul>
+  </div>
+  <!-- ===============底部截图=========================================================================== -->
+  <div id="footer1">
+    <div class="footer1 con">
+      <img src="../images/footer1.png" alt="" />
+    </div>
+  </div>
+  <!-- ===============底部截图2=========================================================================== -->
+  <div id="footer2">
+    <div class="footer2 con">
+      <img src="../images/footer2.png" alt="" />
+    </div>
+  </div>
+</body>
+</html>
