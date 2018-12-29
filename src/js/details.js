@@ -204,7 +204,7 @@ jQuery(function($) {
         var x = e.clientX-this.offsetLeft;//事件对象在小盒子内的横向偏移量
         var y = e.clientY-this.offsetTop;//竖向偏移量
         bigImg.style.left = (-x*2)+310 + "px";//放大图片移动方向相反，偏移距离加倍
-        bigImg.style.top = (-y*2)-410 + "px";
+        bigImg.style.top = (-y*2)+310 + "px";
         console.log(bigImg);
 
 
