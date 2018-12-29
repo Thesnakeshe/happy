@@ -10,6 +10,7 @@
     $cny = isset($_GET["cny"])?$_GET["cny"]:null;
     $qty = isset($_GET["qty"])?$_GET["qty"]:null;
     $suoyin = isset($_GET["suoyin"])?$_GET["suoyin"]:null;
+    var_dump($suoyin);
 // 1.创建连接,测试是否连接成功
     $servername = "localhost";
     $username = "root";

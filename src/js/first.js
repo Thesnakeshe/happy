@@ -4,7 +4,7 @@ jQuery(function($){
         $(".log").html("欢迎"+cookieName);
 
         $.getJSON("../api/car.php?show=true&zhanghao="+cookieName,function(res){
-            console.log(res.length);
+            // console.log(res.length);
             if(res.length >=1){
                 $(".carcs").html(res.length);
             }
