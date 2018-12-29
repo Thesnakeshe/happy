@@ -3,6 +3,6 @@
 .focus ul.horizontal li{float:left;}
 .focus ul.fade  li{position:absolute;left: 0;top: 0;}
 .focus img{display: block;}
-.focus .page{position:absolute;right:0;bottom:0;padding:10px;}
-.focus .page span{display:inline-block;margin:0 5px;width:30px;height:30px;line-height:30px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 50%;box-shadow:0 0 10px rgba(0,0,0,.5);}
-.focus .page span.active{background-color: rgba(255,0,0,.8);}
+.page{position:absolute;left:50%;transform: translateX(-50%); padding:10px;z-index: 50;}
+.page span{display:inline-block;margin:0 5px;width:20px;height:5px;line-height:30px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 5px;box-shadow:0 0 10px rgba(0,0,0,.5);}
+.page span.active{background-color: red;}

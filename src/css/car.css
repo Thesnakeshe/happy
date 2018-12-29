@@ -297,32 +297,20 @@
   width: 20px;
   height: 17px;
   border: 1px solid #ccc;
-}
-
-.carts .cartsts .cartst div:nth-child(4) p span i {
   display: inline-block;
-  position: relative;
-  right: -3px;
-  top: 5px;
   padding-right: 5px;
   width: 19px;
-  height: 16px;
-  background: url(../images/bg_icon2.png) no-repeat -2877px -19px;
+  height: 17px;
+  background: url(../images/bg_icon2.png) no-repeat -2874px -15px;
 }
 
 .carts .cartsts .cartst div:nth-child(4) p span:nth-child(2) {
   border-bottom: none;
-}
-
-.carts .cartsts .cartst div:nth-child(4) p span:nth-child(2) i {
   display: inline-block;
-  position: relative;
-  right: -3px;
-  top: 5px;
   padding-right: 5px;
   width: 19px;
-  height: 16px;
-  background: url(../images/bg_icon2.png) no-repeat -2877px 0;
+  height: 17px;
+  background: url(../images/bg_icon2.png) no-repeat -2874px 5px;
 }
 
 .carts .cartsts .cartst div:nth-child(5) {

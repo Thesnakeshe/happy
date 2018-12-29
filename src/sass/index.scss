@@ -25,10 +25,18 @@
     }
   }
   .airport{
+    &:hover .air1{
+      display:block;
+    }
     .air1{
       padding-left:5px;
+      position:relative;
+      background: #fff;
       border:1px solid #ccc;
-      height: 238px;
+      height:106px;
+      overflow:hidden;
+      display:none;
+      z-index:999;
       li{
         padding:0;
         height: 24px;
@@ -48,13 +56,21 @@
   }
   .lang{
     width: 104px;
+    &:hover .lang1{
+      display:block;
+    }
     p{
       font-weight:900;
     }
     .lang1{
       padding-left:5px;
       border:1px solid #ccc;
-      height: 127px;
+      height: 106px;
+      position:relative;
+      background: #fff;
+      overflow:hidden;
+      display:none;
+      z-index:999;
       li{
         padding:0;
         height: 24px;
@@ -76,6 +92,7 @@
   }
   .userMenu{
     position:absolute;
+    width:500px;
     top:10px;
     right:0;
     .log{
@@ -282,13 +299,21 @@
       width: 165px;
       height: 450px;
       background: #977F71;
-      opacity:0.5;
       position:relative;
       right:-1px;
       top:-18px;
       padding-top:10px;
-      display:none;
+      z-index:500;
+      // opacity:0.5;
+      // display:none;
       li{
+        &:hover{
+          background: red;
+          color:#fff;
+        }
+        &:hover .uu1{
+          display:block;
+        }
         a{
           display:block;
           width: 159px;
@@ -300,12 +325,14 @@
         }
         .uu1{
           padding-top:30px;
+          background: #fff;
           width: 870px;
           position:absolute;
-          background: red;
           left:165px;
           top:0px;
           border:1px solid #E70E0E;
+          opacity:1;
+          display:none;
           .list{
             float:left;
             width: 656px;
@@ -389,7 +416,7 @@
     background: black;
     opacity:0.5;
     position:absolute;
-    right:30px;
+    right:207px;
     bottom:5px;
     z-index:2;
     span{
@@ -405,7 +432,49 @@
 }
 .littleBanner{
   height: 240px;
-  background: red;
+  // background: red;
+  .littleBanner_l1{
+    height: 240px;
+    width: 340px;
+    position:relative;
+    .littleBanner_l{
+      // overflow:hidden;
+      position:relative;
+      background: pink;
+      ul{
+        position:absolute;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .littleBanner_r1{
+    width: 600px;
+    height: 200px;
+    // float:right;
+    overflow:hidden;
+    position:relative;
+    right:-379px;
+    top:-239px;
+    .littleBanner_r{
+      // overflow:hidden;
+      // position:relative;
+      background: pink;
+      ul{
+        position:absolute;
+        padding-bottom:0px;
+        img{
+          width: 100%;
+        }
+      }
+      .page{
+        position:absolute;
+        top:0px;
+
+      }
+    }
+  }
 }
 #nowHeight{
   height: 45px

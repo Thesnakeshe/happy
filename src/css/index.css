@@ -31,10 +31,19 @@
   border-right: 1px solid #ccc;
 }
 
+.headers .airport:hover .air1 {
+  display: block;
+}
+
 .headers .airport .air1 {
   padding-left: 5px;
+  position: relative;
+  background: #fff;
   border: 1px solid #ccc;
-  height: 238px;
+  height: 106px;
+  overflow: hidden;
+  display: none;
+  z-index: 999;
 }
 
 .headers .airport .air1 li {
@@ -59,6 +68,10 @@
   width: 104px;
 }
 
+.headers .lang:hover .lang1 {
+  display: block;
+}
+
 .headers .lang p {
   font-weight: 900;
 }
@@ -66,7 +79,12 @@
 .headers .lang .lang1 {
   padding-left: 5px;
   border: 1px solid #ccc;
-  height: 127px;
+  height: 106px;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  display: none;
+  z-index: 999;
 }
 
 .headers .lang .lang1 li {
@@ -86,6 +104,7 @@
 
 .headers .userMenu {
   position: absolute;
+  width: 500px;
   top: 10px;
   right: 0;
 }
@@ -322,12 +341,20 @@
   width: 165px;
   height: 450px;
   background: #977F71;
-  opacity: 0.5;
   position: relative;
   right: -1px;
   top: -18px;
   padding-top: 10px;
-  display: none;
+  z-index: 500;
+}
+
+.nav .nav_l .mainCate li:hover {
+  background: red;
+  color: #fff;
+}
+
+.nav .nav_l .mainCate li:hover .uu1 {
+  display: block;
 }
 
 .nav .nav_l .mainCate li a {
@@ -342,12 +369,14 @@
 
 .nav .nav_l .mainCate li .uu1 {
   padding-top: 30px;
+  background: #fff;
   width: 870px;
   position: absolute;
-  background: red;
   left: 165px;
   top: 0px;
   border: 1px solid #E70E0E;
+  opacity: 1;
+  display: none;
 }
 
 .nav .nav_l .mainCate li .uu1 .list {
@@ -440,7 +469,7 @@
   background: black;
   opacity: 0.5;
   position: absolute;
-  right: 30px;
+  right: 207px;
   bottom: 5px;
   z-index: 2;
 }
@@ -459,7 +488,52 @@
 
 .littleBanner {
   height: 240px;
-  background: red;
+}
+
+.littleBanner .littleBanner_l1 {
+  height: 240px;
+  width: 340px;
+  position: relative;
+}
+
+.littleBanner .littleBanner_l1 .littleBanner_l {
+  position: relative;
+  background: pink;
+}
+
+.littleBanner .littleBanner_l1 .littleBanner_l ul {
+  position: absolute;
+}
+
+.littleBanner .littleBanner_l1 .littleBanner_l ul img {
+  width: 100%;
+}
+
+.littleBanner .littleBanner_r1 {
+  width: 600px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  right: -379px;
+  top: -239px;
+}
+
+.littleBanner .littleBanner_r1 .littleBanner_r {
+  background: pink;
+}
+
+.littleBanner .littleBanner_r1 .littleBanner_r ul {
+  position: absolute;
+  padding-bottom: 0px;
+}
+
+.littleBanner .littleBanner_r1 .littleBanner_r ul img {
+  width: 100%;
+}
+
+.littleBanner .littleBanner_r1 .littleBanner_r .page {
+  position: absolute;
+  top: 0px;
 }
 
 #nowHeight {

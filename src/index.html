@@ -7,8 +7,11 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="lib/jquery-lmCarousel/jquery-lmCarousel.css" />
     <script src="lib/jquery-3.2.1.js"></script>
+    <!-- <script src="js/first.js"></script> -->
+    <script src="js/common.js"></script>
     <script src="lib/jquery-lmCarousel/jquery-lmCarousel.js"></script>
     <script src="js/index.js"></script>
+    <script src="lib/jquery-lmCarousel/lalal.js"></script>
 
 </head>
 <body>
@@ -18,22 +21,18 @@
              <!-- 顶格的 机场--> 
              <div class="localSelect airport">
              <p><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></p>
-             <ul class="air1" style="display:none">
+             <ul class="air1">
                 <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
                 <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
                 <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li>
                 <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
                 <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
-                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li>
-                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 仁川国际机场</span></a></li>
-                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 金浦国际机场</span></a></li>
-                <li><a href="javascript:;"><img src="http://static.lottedfs.com/static-fo-pc/img/common/flags_kr.gif" /><span>韩国 - 济州国际机场</span></a></li> 
               </ul> 
              </div> 
              <!-- 语言 --> 
              <div class="localSelect lang" id="langArea"> 
               <p class="selected" id="lang"><span><i class="i1"></i> 简体中文</span></p> 
-              <ul class="lang1" style="display:none"> 
+              <ul class="lang1"> 
                <li> <a href="javascript:;"> <span><i class="i1"></i> 한국어</span> </a> </li> 
                <li> <a href="javascript:;"> <span><i class="i1"></i> 简体中文</span></a> </li> 
                <li> <a href="javascript:;"> <span><i class="i1"></i> 日本語</span></a> </li> 
@@ -57,10 +56,18 @@
              <input type="hidden" name="crcAmt" value="6.9" /> 
             </div> 
             <ul class="userMenu">
-             <li><a href="#" class="log">登录</a></li>
+             <li style="position:relative;">
+              <a href="#" class="log">登录</a>
+              <ul class="tuichu1" style="width:75px;height:50px;position:absolute;top:26px;left:4px;font-size:14px;color:#666;text-align:center;background:#F5F5F5;border:1px solid #ccc;z-index: 900;display:none">
+                <li class="tuichu2" style="width:73px;heigth:24px;line-height:24px;">切换账号</li>
+                <li class="tuichu3" style="width:73px;heigth:24px;line-height:24px;">退出</li>
+              </ul>
+
+             </li>
              <li><a href="#">注册会员</a></li>
              <li><a href="#">我的乐天</a></li>
              <li><a href="#">购物车</a></li>
+             <li><a href="html/car.html">购物车<span class="carcs" style="color:red;"></span></a></li>
              <li><a href="#">客服中心</a></li>
              <li><a href="#">收藏本站</a></li>
             </ul> 
@@ -68,7 +75,7 @@
     </div>
     <!-- ================================================================================== -->
     <!-- 大图标呀 -->
-    <div id="search" style="width:100%;background:#fff;z-index:999;">
+    <div id="search" style="width:100%;background:#fff;z-index:800;">
       <div class="search con">
         <div class="search_l">
           <a href="javascript:;"><img src="images/log.png" /></a>
@@ -162,8 +169,688 @@
           <i></i><span>分类</span>
           <div class="mainCate">
             <ul>
-              <li><a href="#">护肤</a>
+              <li><a href="html/list.html">护肤</a>
                 <div class="uu1">
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="..html/list.html">洗面</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                        <li><a href="..html/list.html">洗面膜</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面膜</a></li>
+                        <li><a href="#">洗面膜</a></li>
+                        <li><a href="#">洗面膜</a></li>
+                        <li><a href="#">洗面膜</a></li>
+                        <li><a href="#">洗面膜</a></li>
+                        <li><a href="#">洗面膜</a></li>
+                        <li><a href="#">洗面膜</a></li>
+                        <li><a href="#">洗面膜</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">彩妆</a>
+                <div class="uu1">
+                  
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">彩妆</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">香水/美体/美发</a>
+                <div class="uu1">
+                  
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                        <li><a href="#">香水</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">箱包/钱包</a>
+                <div class="uu1">
+                  
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">钱包</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">手表/首饰</a>
+                <div class="uu1">
+                  
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">手表</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">时尚/配件</a>
+                <div class="uu1">
+                  
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                        <li><a href="#">的时尚</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">数码/电器</a>
+                <div class="uu1">
+                  
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">电器</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">食品/生活</a>
+                <div class="uu1">
+                  
+                  <div class="list">
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">食品</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                      <ul>
+                        <li class="listFirst"><a href="#">洗面</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                        <li><a href="#">洗面奶</a></li>
+                      </ul>
+                  </div>
+                  <div class="listImg"><img src="images/nav1.png"/></div>
+                </div>
+              </li>
+              <li><a href="#">儿童管</a>
+                <div class="uu1">
+                  
                   <div class="list">
                       <ul>
                         <li class="listFirst"><a href="#">洗面</a></li>
@@ -246,30 +933,6 @@
                   <div class="listImg"><img src="images/nav1.png"/></div>
                 </div>
               </li>
-              <li><a href="#">彩妆</a>
-                <div class="uu1"></div>
-              </li>
-              <li><a href="#">香水/美体/美发</a>
-                <div class="uu1"></div>
-              </li>
-              <li><a href="#">箱包/钱包</a>
-                <div class="uu1"></div>
-              </li>
-              <li><a href="#">手表/首饰</a>
-                <div class="uu1"></div>
-              </li>
-              <li><a href="#">时尚/配件</a>
-                <div class="uu1"></div>
-              </li>
-              <li><a href="#">数码/电器</a>
-                <div class="uu1"></div>
-              </li>
-              <li><a href="#">食品/生活</a>
-                <div class="uu1"></div>
-              </li>
-              <li><a href="#">儿童管</a>
-                <div class="uu1"></div>
-              </li>
             </ul>
           </div>
         </div>
@@ -307,11 +970,26 @@
   <!-- ================================================== -->
   <!-- 两个小的轮播图 -->
   <div id="littleBanner">
+
     <div class="littleBanner con">
-      <div class="littleBanner_l">
-        
+      <div class="littleBanner_l1">
+        <div class="littleBanner_l"></div>
       </div>
-      <div class="littleBanner_r">
+     <script>
+        jQuery(function($){
+            $(".littleBanner_l").lmCarousell({imgs:["images/li1.jpg","images/li2.jpg","images/li1.jpg"],width:304,height:150})
+        })
+     </script>
+
+      <div class="littleBanner_r1">
+        <div class="littleBanner_r">
+     <script>
+        jQuery(function($){
+            $(".littleBanner_r").lmCarousell({imgs:["images/bigbanner10.jpg","images/bigbanner8.jpg","images/bigbanner10.jpg"],width:600,height:150})
+        })
+     </script>
+          
+        </div>
         
       </div>
     </div>
@@ -535,8 +1213,17 @@
   </div>
   <!-- =======================一个轮播图========================================================================== -->
   <div id="littleBanner2">
-    <div class="littleBanner2 con">
-      
+    <div class="littleBanner23 con">
+      <div class="littleBanner2 con">
+        
+      </div>
+
+     <script>
+        jQuery(function($){
+            $(".littleBanner2").lmCarousell({imgs:["images/li4.png","images/li5.png","images/li6.png"],width:1000,height:243})
+        })
+     </script>
+          
     </div>
   </div>
   <!-- =========空白区域================================================================================= -->
@@ -647,20 +1334,6 @@
   <!-- ====================特价商品===================================================================================== -->
   <div id="special">
     <div class="special con">
-    </div>
-  </div>
-  <!-- ======================限时抢购===================================================================================== -->
-   <!-- 限时抢购 头头-->
-  <div id="xianshi">
-    <div class="xianshi con">
-      <p class="xianshi_l">限时抢购</p>
-      <div class="xianshi_r"><img src="images/daojishi.png" /><p>07:16:55</p></div>
-    </div>
-  </div>
-  <!-- =================================限时的轮播图============================================================== -->
-  <div id="xianshi2">
-    <div class="xianshi2 con">
-      
     </div>
   </div>
   <!-- ====================================轮播图的点点================================================================== -->

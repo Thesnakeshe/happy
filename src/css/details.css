@@ -109,7 +109,7 @@
 
 .goodsName .goodsName_l {
   float: left;
-  width: 240px;
+  width: 400px;
   height: 94px;
 }
 
@@ -197,6 +197,7 @@
   height: 692px;
   text-align: center;
   float: left;
+  position: relative;
 }
 
 .googsPhotos .googsPhotos_l p {
@@ -204,16 +205,29 @@
   padding-top: 58px;
 }
 
+.googsPhotos .googsPhotos_l p .fly {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 .googsPhotos .googsPhotos_l p img {
   width: 381px;
 }
 
-.googsPhotos .googsPhotos_l p:nth-child(2) {
+.googsPhotos .googsPhotos_l p:nth-child(3) {
   font-size: 12px;
+  position: relative;
+  top: -350px;
   color: #ccc;
 }
 
-.googsPhotos .googsPhotos_l p:nth-child(3) i {
+.googsPhotos .googsPhotos_l p:nth-child(4) {
+  position: relative;
+  top: -368px;
+}
+
+.googsPhotos .googsPhotos_l p:nth-child(4) i {
   display: inline-block;
   position: relative;
   right: 0px;
@@ -224,15 +238,31 @@
   background: url(../images/bg_review.png) no-repeat 0px -13px;
 }
 
-.googsPhotos .googsPhotos_l p:nth-child(3) em {
+.googsPhotos .googsPhotos_l p:nth-child(4) em {
   font-size: 18px;
   color: #DA291C;
   font-weight: 900;
 }
 
-.googsPhotos .googsPhotos_l p:nth-child(3) span {
+.googsPhotos .googsPhotos_l p:nth-child(4) span {
   font-size: 16px;
   color: #ccc;
+}
+
+.googsPhotos .googsPhotos_l .fangda {
+  width: 381px;
+  height: 381px;
+  z-index: -1;
+  position: relative;
+  top: -381px;
+  left: 76px;
+  overflow: hidden;
+}
+
+.googsPhotos .googsPhotos_l .fangda .fangda2 {
+  position: absolute;
+  width: 762px;
+  height: 762px;
 }
 
 .googsPhotos .googsPhotos_r {

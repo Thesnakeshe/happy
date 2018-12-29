@@ -82,15 +82,6 @@ jQuery(function($) {
         // }
 
 
-
-
-
-
-
-
-
-
-
     //点击排序呀../api/list.php?show=true
     
         $(".dijia").on("click",function(){
@@ -140,7 +131,7 @@ jQuery(function($) {
             var str="";
             shuju.data.map(function(item,index) {
               str += 
-                        `<div class="mainBoxs">
+                        `<div class="mainBoxs" id="${item.id}">
                           <img src="../${item.img}" />
                           <div>
                             <p>${item.name}  <em> ${item.english}</em> </p>
@@ -153,8 +144,15 @@ jQuery(function($) {
             }).join("");
             return str;
         }
-
-
     });
+    //点击跳转详情页
+    $(".mainBox").on("click",".mainBoxs",function(){
+        location.href = "details.html?id="+this.id;
+    })
+
+
+
+
+
 
 })

@@ -117,6 +117,10 @@
   width: 597px;
 }
 
+.sign .signBox .sign2 span {
+  font-size: 14px;
+}
+
 .sign .signBox .sign2 .sign2_t {
   height: 114px;
 }

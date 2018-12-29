@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../css/first.css" />
     <link rel="stylesheet" type="text/css" href="../css/sign.css" />
+    <script src="../js/common.js"></script>
     <script src="../lib/jquery-3.2.1.js"></script>
     <script src="../js/sign.js"></script>
 </head>
@@ -55,10 +56,13 @@
              <input type="hidden" name="crcAmt" value="6.9" /> 
             </div> 
             <ul class="userMenu">
-             <li><a href="#" class="log">登录</a></li>
+             <li><a href="#" class="log">登录</a>
+            
+
+             </li>
              <li><a href="#">注册会员</a></li>
              <li><a href="#">我的乐天</a></li>
-             <li><a href="#">购物车</a></li>
+             <li><a href="car.html">购物车<span class="carcs" style="color:red;"></span></a></li>
              <li><a href="#">客服中心</a></li>
              <li><a href="#">收藏本站</a></li>
             </ul> 
@@ -69,7 +73,7 @@
     <div id="search">
       <div class="search con">
         <div class="search_l">
-          <a href="javascript:;"><img src="../images/log.png" /></a>
+          <a href="../images/"><img src="../images/log.png" /></a>
         </div>
         <div class="search_r">
           <div class="search_r1">
@@ -314,12 +318,14 @@
             <div class="sign2">
                 <div class="sign2_t">
                     <p>
-                        <input type="text" placeholder="请输入账号" /><br />
-                        <input type="text" placeholder="请输入密码" />
+                        <input type="text" placeholder="请输入账号" class="zh" /><br />
+                        <span class="tishi1"></span>
+                        <input type="text" placeholder="请输入密码" class="mm" />
                     </p>
-                    <p><a href="javascript:;">登录</a></p>
+                    <p class="signInt"><a href="javascript:;">登录</a></p>
                 </div>
                 <div class="sign2_b">
+                        <span class="tishi2"></span><br />
                     <input type="checkbox" />记住账号
                 </div>
             </div>

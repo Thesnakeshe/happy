@@ -1,0 +1,45 @@
+/*.bgColor {}*/
+.focus img{display: block;}
+.focus{position:relative;overflow:hidden;height: 320px;}
+.focus ul{position:absolute;overflow:hidden;list-style: none;padding:0;margin:0;}
+.focus ul.fade li{position:absolute;top: 0;left: 0;}
+.focus ul.horizontal li{float:left;}
+.focus .page{position:absolute;left:50%;bottom:0;transform:translateX(-50%);padding:10px;}
+.focus .page span{display:inline-block;margin:0 5px;width:20px;height:20px;line-height:20px;font-size:12px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 50%;box-shadow:0 0 10px rgba(0,0,0,.5);cursor:pointer;}
+.focus .page span.active{background-color: #90c31f;}
+.focus .overleft,.focus .overright {
+    display:block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,.4);
+    position: absolute;
+    top: 50%;
+    font-family: "宋体";
+    font-weight: 900;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    line-height: 40px;
+    cursor:pointer;
+}
+.focus .overleft {
+    left: 0;
+    transform:translate(-55%,-50%);
+}
+.focus .overright {
+    right: 0;
+    transform:translate(55%,-50%);
+}
+.focus .overleft i,.focus .overright i{
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+}
+.focus .overright i {
+    left: 7px;
+}
+.focus .overleft i {
+    left: 23px;
+}

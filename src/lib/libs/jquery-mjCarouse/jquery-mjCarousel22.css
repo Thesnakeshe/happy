@@ -1,0 +1,23 @@
+.focus3 img{display: block;cursor:pointer};
+.focus3 {position:relative;overflow:hidden;}
+.focus3 ul{position:absolute;overflow:hidden;list-style: none;padding:0;margin:0;}
+.focus3 ul.fade li{position:absolute;top: 0;left: 0;}
+.focus3 ul.horizontal li{float:left;}
+.focus3 .page span{
+    display:inline-block;
+    /*float: left;*/
+    margin:0 3px;
+    width:35px;
+    height:5px;
+    /*line-height:20px;*/
+    /*font-size:12px;*/
+    background-color:rgba(0,0,0,.6);
+    /*text-align:center;*/
+    /*color:#fff;*/
+    /*border-radius: 50%;*/
+    /*box-shadow:0 0 10px rgba(0,0,0,.5);*/
+    cursor:pointer;
+}
+.focus3 .page{position:absolute;left:50%;bottom:0;transform:translateX(-50%);padding:10px;}
+
+.focus3 .page span.active{background-color: #90c31f;}

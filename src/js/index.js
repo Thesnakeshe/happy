@@ -6,7 +6,7 @@
             var shuju = JSON.parse(res);
             shuju.map(function(item) {
                 str += `
-                        <div>
+                        <div id="${item.id}">
                           <img src="${item.img}"/>
                           <p>${item.name} </p>
                           <p class="goodsxiao">${item.english}</p>
@@ -17,7 +17,7 @@
             $(".littleGood").html(str);
             shuju.map(function(item,index) {
                 str2 += `
-                    <div class="hfshop">
+                    <div class="hfshop" id="${item.id}">
                       <div class="hf_l">
                         <span>${index+1}</span>
                         <img src="${item.img}" />
@@ -62,4 +62,54 @@ document.addEventListener("DOMContentLoaded", function(){
                 }window.scrollTo(0, top);
         },20)
     }
+
+    var cookieName  = Cookie.getCookie("users") || [];
+    console.log(cookieName);
+    if(cookieName != ""){
+        $(".log").html("欢迎"+cookieName);
+        $.getJSON("../api/car.php?show=true&zhanghao="+cookieName,function(res){
+            console.log(res.length);
+            if(res.length >=1){
+                $(".carcs").html(res.length);
+            }
+        })
+        $(".log").on("click",function(){
+            $(".tuichu1").css("display","block");
+                setTimeout(function(){
+                    $(".tuichu1").hide();
+                },10000)
+            $(".tuichu2").on("click",function(){
+                location.href = "html/sign.html";
+            })
+            $(".tuichu3").on("click",function(){
+                Cookie.delCookie("users","/");
+                $(".tuichu1").css("display","none");
+                $(".log").html("登录");
+            })
+
+        })
+    }else{
+        $(".log").html("登录");
+        $(".log").on("click",function(){
+          location.href = "html/sign.html";
+        })
+    }
+
+
+
+    //点击跳转详情页
+    $(".hufuList_r").on("click",".hfshop",function(){
+        // console.log(this.id);
+        location.href = "html/details.html?id="+this.id;
+    })
+    //点击跳转详情页
+    $(".littleGood").on("click","div",function(){
+        // console.log(this.id);
+        location.href = "html/details.html?id="+this.id;
+    })
+
+
+
+
+
 })

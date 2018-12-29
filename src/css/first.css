@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-12-24 21:14:47
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-12-26 10:04:38
+* @Last Modified time: 2018-12-27 20:25:05
 */
 #headers {
   background: #F5F5F5;
@@ -114,7 +114,7 @@
 #search {
   height: 105px;
   width: 100%;
-  z-index: 999;
+  z-index: 800;
 }
 
 .search {

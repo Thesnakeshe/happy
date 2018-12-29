@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../css/first.css" />
     <link rel="stylesheet" type="text/css" href="../css/details.css" />
     <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="../js/first.js"></script>
+    <script src="../js/common.js"></script>
     <script src="../js/details.js"></script>
 </head>
 <body>
@@ -55,10 +57,22 @@
              <input type="hidden" name="crcAmt" value="6.9" /> 
             </div> 
             <ul class="userMenu">
-             <li><a href="#" class="log">登录</a></li>
+             <li><a href="#" class="log">登录</a>
+
+
+            
+              <ul class="tuichu1" style="width:75px;height:50px;position:absolute;top:26px;left:4px;font-size:14px;color:#666;text-align:center;background:#F5F5F5;border:1px solid #ccc;z-index: 900;display:none">
+                <li class="tuichu2" style="width:73px;heigth:24px;line-height:24px;">切换账号</li>
+                <li class="tuichu3" style="width:73px;heigth:24px;line-height:24px;">退出</li>
+              </ul>
+
+
+
+
+             </li>
              <li><a href="#">注册会员</a></li>
              <li><a href="#">我的乐天</a></li>
-             <li><a href="#">购物车</a></li>
+             <li><a href="car.html">购物车<span class="carcs" style="color:red;"></span></a></li>
              <li><a href="#">客服中心</a></li>
              <li><a href="#">收藏本站</a></li>
             </ul> 
@@ -66,10 +80,10 @@
     </div>
     <!-- ================================================================================== -->
     <!-- 大图标呀 -->
-    <div id="search" style="width:100%;background:#fff;z-index:999;">
+    <div id="search" style="width:100%;background:#fff;z-index:500;">
       <div class="search con">
         <div class="search_l">
-          <a href="javascript:;"><img src="../images/log.png" /></a>
+          <a href="../index.html"><img src="../images/log.png" /></a>
         </div>
         <div class="search_r">
           <div class="search_r1">
@@ -338,6 +352,9 @@
             <p class="gp1">
                 <img src="../images/111.jpg" alt="" />
             </p>
+            <p class="fangda">
+              <img src="" class="fangda2"/>
+            </p>
             <p>把鼠标放进图片查看大图</p>
             <p><i></i><span><em>100分</em>（17）</span></p>
         </div>
@@ -346,11 +363,11 @@
             <div class="gprbox1">
                 <dl>
                     <dt>原价</dt>
-                    <dd><span>$25</span><em>（约163元）</em></dd>
+                    <dd><span class="gprbox1_yuan" style="text-decoration:line-through;"></span><em class="gprbox1_yuan2">（约163元）</em></dd>
                 </dl><br />
                 <dl>
                     <dt>现价</dt>
-                    <dd><span>$23</span><em>（约143元）</em></dd>
+                    <dd><span class="gprbox1_xian" >$23</span><em class="gprbox1_xian2">（约143元）</em></dd>
                 </dl>
             </div>
             <!-- ============================================= -->
@@ -398,7 +415,7 @@
                 <dl>
                     <dt>数量</dt>
                     <dd>
-                       <p><button></button><input type="text" placeholder="1" /><button></button></p>
+                       <p><button class="jian"></button><input class="shuliang" type="text" value="1" /><button class="jia"></button></p>
                     </dd>
                 </dl><br />
             </div>
@@ -410,7 +427,7 @@
             <!-- ============================================= -->
             <!-- ============================================ -->
             <div class="gprbox7">
-                <p>加入购物车</p><p>立即购买</p>
+                <p class="jiacar">加入购物车</p><p class="buycar">立即购买</p>
             </div>
             <!-- ============================================= -->
            
@@ -422,10 +439,10 @@
      <!-- ========================================================================================== -->
     <div class="footerMenus con">
         <ul>
-            <li><a href="#">商品信息</a></li>
-            <li><a href="#">商品评价</a></li>
-            <li><a href="#">退货指南</a></li>
-            <li><a href="#">取货指南</a></li>
+            <li><a href="javascript:;">商品信息</a></li>
+            <li><a href="javascript:;">商品评价</a></li>
+            <li><a href="javascript:;">退货指南</a></li>
+            <li><a href="javascript:;">取货指南</a></li>
         </ul>
         <div class="content">
             <div style=""><img src="../images/tab.png"></div>
@@ -437,7 +454,7 @@
 
     <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(){
-        var tab = document.querySelector(".footerMenu");
+        var tab = document.querySelector(".footerMenus");
         var herder = tab.children[0].children;
         var bodys = tab.children[1].children;
         herder[0].className = "active";

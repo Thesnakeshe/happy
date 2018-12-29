@@ -1,6 +1,9 @@
 <?php
     $qty = isset($_GET["qty"])? $_GET["qty"]: 4;
     $currentPage = isset($_GET["currentPage"])? $_GET["currentPage"]: 1;
+    $id = isset($_GET["id"])?$_GET["id"]:null;
+    $show = isset($_GET["show"])?$_GET["show"]:null;
+
     // 1.创建连接,测试是否连接成功
     $servername = "localhost";
     $username = "root";
@@ -24,7 +27,13 @@
     //            * fetch_row() 得到第一个结果,只能拿到值
     // 4.若是查询语句，记得释放查询结果集，避免资源浪费
     // 5.关闭数据库
-
+    if($show == 'true'){
+        $res = $conn -> query('select * from ship where id="'.$id.'"');
+        $content = $res->fetch_all(MYSQLI_ASSOC);
+        $res->close();
+        $conn->close();
+        echo json_encode($content,JSON_UNESCAPED_UNICODE);
+    }else{
         $res = $conn -> query('select * from ship');
         $content = $res->fetch_all(MYSQLI_ASSOC);
         $res->close();
@@ -39,6 +48,7 @@
                 "currentPage" => $currentPage
             );
             echo json_encode($res,JSON_UNESCAPED_UNICODE);
+    }
     // $res = $conn -> query('select * from ship');
     //     $content = $res->fetch_all(MYSQLI_ASSOC);
     //     $res->close();

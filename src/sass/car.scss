@@ -263,29 +263,19 @@
                             width: 20px;
                             height: 17px;
                             border:1px solid #ccc;
-                            i{
-                                display:inline-block;
-                                position:relative;
-                                right:-3px;
-                                top:5px;
-                                padding-right:5px;
-                                width: 19px;
-                                height: 16px;
-                                background: url(../images/bg_icon2.png) no-repeat -2877px -19px;
-                            }
+                            display:inline-block;
+                            padding-right:5px;
+                            width: 19px;
+                            height: 17px;
+                            background: url(../images/bg_icon2.png) no-repeat -2874px -15px;
                             &:nth-child(2){
                                 border-bottom:none;
-                                i{
-                                    display:inline-block;
-                                    position:relative;
-                                    right:-3px;
-                                    top:5px;
-                                    padding-right:5px;
-                                    width: 19px;
-                                    height: 16px;
-                                    background: url(../images/bg_icon2.png) no-repeat -2877px 0;
-                                }
-                            }
+                                display:inline-block;
+                                padding-right:5px;
+                                width: 19px;
+                                height: 17px;
+                                background: url(../images/bg_icon2.png) no-repeat -2874px 5px;
+                        }
                         }
                     }   
                 }

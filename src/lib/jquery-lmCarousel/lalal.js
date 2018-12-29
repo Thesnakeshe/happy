@@ -1,10 +1,10 @@
-jQuery.fn.lmCarousel=function(obj){
+jQuery.fn.lmCarousell=function(obj){
     // console.log(this);
     var defaults = {
         imgs : [],
         width : 300,
         height : 180,
-        type : "vertical",
+        type : "horizontal",
         seamless : true,
         idx : 0,
     };
@@ -22,7 +22,7 @@ jQuery.fn.lmCarousel=function(obj){
             $li.appendTo($ul);
         }
         $ul.appendTo(this);
-        this.addClass('lmCarousel').width(opt.width).height(opt.height);
+        this.addClass('focus').width(opt.width).height(opt.height);
         if(opt.seamless == true && (opt.type == "horizontal" || opt.type=="vertical")){
             // $('<img src="'+opt.imgs[0]+'"/>').width(opt.width).height(opt.height).appendTo($li);
             // $li.appendTo($ul);
@@ -32,7 +32,7 @@ jQuery.fn.lmCarousel=function(obj){
         // 2.判断type类型，实现不同的css样式
         if(opt.type == "horizontal"){
             $ul.addClass("horizontal");
-            $ul.width(opt.width*(len+1));
+            $ul.width(opt.width*(len+2));
         }else if(opt.type == "fade"){
             $ul.addClass("fade");
             $ul.width(opt.width).height(opt.height);
@@ -73,11 +73,11 @@ jQuery.fn.lmCarousel=function(obj){
         for(let j=0;j<len;j++){
             opt.idx++;
             var $span = $('<span/>');
-            $span.html(opt.idx);
+            // $span.html(opt.idx);
             $span.appendTo($page);
         } 
         $page.children().eq(0).addClass("active")
-            $page.appendTo(this);
+            $page.appendTo(this.parent());
     }
     //添加点击事件
     init();

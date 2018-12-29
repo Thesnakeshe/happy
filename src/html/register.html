@@ -59,10 +59,13 @@
              <input type="hidden" name="crcAmt" value="6.9" /> 
             </div> 
             <ul class="userMenu">
-             <li><a href="#" class="log">登录</a></li>
+             <li><a href="#" class="log">登录</a>
+
+
+             </li>
              <li><a href="#">注册会员</a></li>
              <li><a href="#">我的乐天</a></li>
-             <li><a href="#">购物车</a></li>
+             <li><a href="car.html">购物车<span class="carcs" style="color:red;"></span></a></li>
              <li><a href="#">客服中心</a></li>
              <li><a href="#">收藏本站</a></li>
             </ul> 
@@ -73,7 +76,7 @@
     <div id="search">
       <div class="search con">
         <div class="search_l">
-          <a href="javascript:;"><img src="../images/log.png" /></a>
+          <a href="../index.html"><img src="../images/log.png" /></a>
         </div>
         <div class="search_r">
           <div class="search_r1">
@@ -302,6 +305,8 @@
       注册乐天网上免税店会员
     </div>
         <!-- =======步骤================================ -->
+  <form action="#">
+          
         <div class="stepNavi con">
             <ul>
                 <li>同意条款/选择注册方式</li>
@@ -324,8 +329,8 @@
         <dl>
             <dt><em>*</em>姓名</dt>
             <dd>
-                <input type="text" />
-                <input type="text" />
+                <input type="text" id="nameXing" required />
+                <input type="text" id="nameMing" required />
                 <select class="selectStyle" >
                     <option value="" selected="">选择国籍</option>
                     <option value="JPN">日本</option>
@@ -344,7 +349,8 @@
                     <option value="SEA">其他东南亚国家</option>
                     <option value="RST">侨胞</option>
                     <option value="OTH">其他</option>
-                </select>
+                </select><br />
+                <span style="color:red;"></span>
                 <p>·请输入与护照一致的英文姓名（例：WANG XIAOMING）</p>
             </dd>
         </dl>
@@ -360,7 +366,7 @@
         <dl>
             <dt><em>*</em>生日</dt>
             <dd>
-              <input class="jcDate" /><br />
+              <input class="jcDate" required/><br />
               <span></span>
               <script>
                   $(function (){
@@ -386,8 +392,8 @@
         <dl>
             <dt><em>*</em>账号</dt>
             <dd>
-              <p><input type="text" /><button>确认是否可用</button></p>
-              <span></span>
+              <p><input type="text" id="zhangh1" required/><button class="sures">确认是否可用</button></p>
+              <span class="zhanghT"></span>
               <ul>
                 <li>·请输入由英文字母和数字组成的4~15位账号。</li>
               </ul>
@@ -397,8 +403,8 @@
         <dl>
             <dt><em>*</em>密码</dt>
             <dd>
-              <input type="text" /><br />
-              <span></span>
+              <input type="text" id="mima1" required/><br />
+              <span class="mima1T" ></span>
               <ul>
                 <li>·请输入由英文大/小写字母、数字、特殊符号组成的10~15位数密码。（特殊符号为可选，英文字母区分大小写）</li>
               </ul>
@@ -408,21 +414,24 @@
         <dl>
             <dt><em>*</em>确认密码</dt>
             <dd>
-              <input type="text" />
+              <input type="text" id="mima2" required /><br />
+              <span class="mima2T" ></span>
             </dd>
         </dl>
     <!-- =====7====================== -->
         <dl>
             <dt><em>*</em>电子邮箱</dt>
             <dd>
-              <input type="text" />
+              <input type="text"  id="emails" required/><br />
+              <span class="emailsT" ></span>
             </dd>
         </dl>
     <!-- =====8===================== -->
         <dl>
             <dt>手机号码</dt>
             <dd>
-              <input type="text" />
+              <input type="text"   id="haoma" /><br />
+              <span class="haomaT" ></span>
             </dd>
         </dl>
     <!-- =====9====================== -->
@@ -461,11 +470,13 @@
     <!-- ========注册================================== -->
     <div class="buySome con">
         <p>上一步</p>
-        <p>注册</p>
+        <p class="inzu">注册</p>
     </div>
+
+  </form>
 <!-- ===========截图================================ -->
-    <div class="jietu con">
+    <!-- <div class="jietu con">
         <img src="../images/carj.png" alt="" />
-    </div> 
+    </div>  -->
 </body>
 </html>
