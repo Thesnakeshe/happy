@@ -43,6 +43,7 @@ jQuery.fn.lmCarousell=function(obj){
     }
     var move = () =>{
         $timer = setInterval(function(){
+            console.log(opt.idx);
             opt.idx++;
             showPic();
         }, 2000)
@@ -53,18 +54,23 @@ jQuery.fn.lmCarousell=function(obj){
             if(opt.idx == len+1){
                 opt.type == "vertical"? $ul.css("top",0) : $ul.css("left",0);
                 opt.idx = 1;
+            }else if(opt.idx >=len+1){
+                opt.idx = 0;
+            }else if(opt.idx==-1){
+                opt.idx=opt.imgs.length-1; 
+                $ul.animate({left:-opt.idx*opt.width},33);
+                // ulbox.style.left=-firstImg.offsetWidth *(len-1) +"px"; //len-1=3复制的那个节点 插入到最后  因为替换是一瞬间的可以造成向左滑动到倒数第一张的的假象 -1代表
+                //这个len-2意思很多 len为length长度为4（复制一张） 而且-2是因为-1是length-1为下标，另外的-1是left值为0就是第一张
             }
-        }else if(opt.idx >=len){
-            opt.idx = 0;
         }
         if(opt.type == "vertical"){
-            $ul.animate({top:-opt.idx*opt.height},1000);
+            $ul.animate({top:-opt.idx*opt.height},500);
         }else if(opt.type == "horizontal"){
-            $ul.animate({left:-opt.idx*opt.width},1000);
+            $ul.animate({left:-opt.idx*opt.width},500);
         }else if(opt.type == "fade"){
-            $ul.children().eq(opt.idx).animate({opacity:1},1000).siblings().animate({opacity:0},1000);
+            $ul.children().eq(opt.idx).animate({opacity:1},500).siblings().animate({opacity:0},500);
         }
-            $page.children().eq(opt.idx-3).addClass("active").siblings().removeClass('active');
+            $page.children().eq(opt.idx-len).addClass("active").siblings().removeClass('active');
     }
     //添加标签号
     var diandian = ()=>{
@@ -76,8 +82,16 @@ jQuery.fn.lmCarousell=function(obj){
             // $span.html(opt.idx);
             $span.appendTo($page);
         } 
-        $page.children().eq(0).addClass("active")
-            $page.appendTo(this.parent());
+        $page.children().eq(0).addClass("active");
+        $right = $("<p/>");
+        $right.addClass("right").html("<");
+        $left = $("<p/>");
+        $left.addClass("left").html(">");
+        // $left.addClass("left");
+        $right.appendTo(this);
+        $left.appendTo(this);
+
+        $page.appendTo(this.parent());
     }
     //添加点击事件
     init();
@@ -90,9 +104,22 @@ jQuery.fn.lmCarousell=function(obj){
     //划上清除定时器
     this.on("mouseover",function(){
         clearInterval($timer);
+        $(this).find(".left").css("display","block");
+        $(this).find(".right").css("display","block");
     })
     // //移出开启定时器
     this.on("mouseout",function(){
+        $(this).find(".left").css("display","none");
+        $(this).find(".right").css("display","none");
         move();
+    })
+    //点击左右两个键切换图片呀
+    this.on("click",".left",function(){
+        showPic();
+        opt.idx ++;
+    })
+    this.on("click",".right",function(){
+        showPic();
+        opt.idx --;
     })
 }
