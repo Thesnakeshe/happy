@@ -113,7 +113,7 @@ jQuery(function($) {
         var arrXiang = item.split("=");
         shu[arrXiang[0]] = arrXiang[1];
     })
-        console.log(shu.id);
+        // console.log(shu.id);
     //开启异步连接后端
     $.getJSON("../api/details.php?show=true&id="+shu.id,function(res){
         // console.log(res[0]);
@@ -130,8 +130,8 @@ jQuery(function($) {
         $(".jian").on("click",function(){
             $shu = $(".shuliang").val();
             $shu--;
-            if($shu <= 0){
-                $shu = 0;
+            if($shu <= 1){
+                $shu = 1;
             }
             $(".shuliang").val($shu);
         })
@@ -160,7 +160,11 @@ jQuery(function($) {
                 $suoyin =res[0].id;
                 // console.log($qty);
                 $.get("../api/usership.php?yes=true&cookie="+$cookie+"&imagess="+$imagess+"&names="+$names+"&english="+$english+"&detail="+$detail+"&dols="+$dols+"&cny="+$cny+"&qty="+$qty+"&suoyin="+$suoyin,function(res){
-                    console.log(res);
+                    // console.log(res);
+                })
+                //渲染头部购物车
+                $.getJSON("../api/usership.php?show=true&cookie="+$cookie,function(ress){
+                        $(".carcs").html(ress.length);
                 })
                 //获取当前页面的值准备加入进去
                 //
@@ -184,7 +188,7 @@ jQuery(function($) {
         })
         //点击立即购买进入购物车
         $(".buycar").on("click",function(){
-            console.log(shu.id);
+            // console.log(shu.id);
             location.href = "car.html";
         })
     })
@@ -205,7 +209,7 @@ jQuery(function($) {
         var y = e.clientY-this.offsetTop;//竖向偏移量
         bigImg.style.left = (-x*2)+310 + "px";//放大图片移动方向相反，偏移距离加倍
         bigImg.style.top = (-y*2)+310 + "px";
-        console.log(bigImg);
+        // console.log(bigImg);
 
 
     })

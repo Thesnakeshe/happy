@@ -44,12 +44,18 @@ jQuery(function($) {
                 })
             })
             //点击减数量
-            $(".shujian1").on("click",function(){
+            $(".cartsts").on("click",".cartst .shujian1",function(){
                 var $ss2 = $(this).parent().parent().parent().attr("id");
-
-                $.get("../api/car.php?shujian1=true&ss2="+$ss2,(res) => {
-                    $(this).prev().prev().val(res);
-                })
+                // console.log($(this).prev().prev().val());
+                var $ssr = $(this).prev().prev().val()-1;
+                if($ssr == 0){
+                    $(this).prev().prev().val(1);
+                    console.log($ssr);
+                }else{
+                    $.get("../api/car.php?shujian1=true&ss2="+$ss2,(res) => {
+                        $(this).prev().prev().val(res);
+                    })
+                }
             })
 
 
@@ -96,9 +102,40 @@ jQuery(function($) {
                         $('.price2').html("约"+(price*6.8).toFixed(2)+"元")
                     // }
             });
+            //点击删除键，删除选中的商品
+            $('.btnDelete').on('click',function(){
+                var mes = confirm('您确定要删除选中商品吗？');
+                if(mes){
+                    // var arr = checknum();
+                    for(let i = 0; i <= res.length; i++) {
+                        if($('.good_checkbox').eq(i).prop('checked')){
+                            var $diss = ($('.good_checkbox').eq(i).closest('.cartst').attr("id"));
+                            $.get("../api/car.php?shanhang=true&idname="+$diss,function(res){
+                                var cookieName  = Cookie.getCookie("users") || [];
+                                $cookie = cookieName;
+                                // console.log(res);
+                                //渲染头部购物车
+                                $.getJSON("../api/usership.php?show=true&cookie="+$cookie,function(ress){
+                                    if(ress.length == 0){
+                                        $(".carcs").html("");
+                                    }else{
+                                        $(".carcs").html(ress.length);
+                                    }
+                                })
+                                $(".cartsts").html(xuanran(res));
+                            })
+                            $('.good_checkbox').eq(i).closest('.cartst').remove();
+                        }
+                    }
 
-        //xuanran
+                }
+            })
+
+
         })
+
+
+
     }
     //删除单行
     $('.cartsts').on('click', '.shanchu1', function() {
@@ -106,43 +143,24 @@ jQuery(function($) {
         // console.log(mes);
         if(mes) {
             $(this).parent().parent().remove();
-            $dis = $(this).parent().parent().attr("id")
+            $dis = $(this).parent().parent().attr("id");
+            // console.log($(this).parent().parent().attr("id"));
             $.get("../api/car.php?shanhang=true&idname="+$dis,function(res){
+                var cookieName  = Cookie.getCookie("users") || [];
+                $cookie = cookieName;
                 // console.log(res);
-            $(".cartsts").html(xuanran(res));
-
+                //渲染头部购物车
+                $.getJSON("../api/usership.php?show=true&cookie="+$cookie,function(ress){
+                    if(ress.length == 0){
+                        $(".carcs").html("");
+                    }else{
+                        $(".carcs").html(ress.length);
+                    }
+                })
+                $(".cartsts").html(xuanran(res));
             })
         }
     });
-    //渲染价格的代码
-    // function jiesuan(){
-        // var price = 0;
-        // var $xuanze = $(".cartsts :checked").length;
-        // for(var i = 0; i < $xuanze; i++) {
-        //     var nowpri = $('.cartsts').eq($xuanze[i]).text();
-        //     price += parseInt(nowpri);
-        // }
-        // $('#totalprice').html('总计（不含运费）：￥' + price.toFixed(2));
-
-    // }
-
-    //全删
-    // $('.btnDelete').on('click', function() {
-    //     // var arr = checknum();
-    //     var $xuanze = $(".cartsts :checked").length;
-
-    //     var mes = confirm('您确定要删除多行吗？');
-    //     if(mes) {
-    //         for(var i = $xuanze - 1; i >= 0; i--) {
-    //             $('.good_check').eq($xuanze[i]).parent().remove();
-    //         }
-    //         update();
-    //     }
-    //     // console.log(arr);
-    // });
-
-
-
 
 
 
@@ -179,7 +197,7 @@ jQuery(function($) {
                         </p>
                     </div>
                     <div>
-                        <span>$${item.dols*1.2.toFixed(2)}</span>
+                        <span>$${(item.dols*1.2).toFixed(2)}</span>
                         <span><em>$${item.dols}</em></span>
                         <span>9.5折<i></i></span>
                     </div>

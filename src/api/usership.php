@@ -1,6 +1,7 @@
 <?php
 
     $yes = isset($_GET["yes"])?$_GET["yes"]:null;
+    $show = isset($_GET["show"])?$_GET["show"]:null;
     $cookie = isset($_GET["cookie"])?$_GET["cookie"]:null;
     $imagess = isset($_GET["imagess"])?$_GET["imagess"]:null;
     $names = isset($_GET["names"])?$_GET["names"]:null;
@@ -10,7 +11,7 @@
     $cny = isset($_GET["cny"])?$_GET["cny"]:null;
     $qty = isset($_GET["qty"])?$_GET["qty"]:null;
     $suoyin = isset($_GET["suoyin"])?$_GET["suoyin"]:null;
-    var_dump($suoyin);
+    // var_dump($suoyin);
 // 1.创建连接,测试是否连接成功
     $servername = "localhost";
     $username = "root";
@@ -31,10 +32,18 @@
             $ccc = $contents[0]["qty"] + $qty;
             $res = $conn->query('
                     update usership set qty="'.$ccc.'" where suoyin="'.$suoyin.'" and zhanghao="'.$cookie.'"');
+            echo "品名已存在";
         }else{
             $ress = $conn->query('insert into usership (zhanghao,img,name,english,detail,dols,cny,qty,suoyin) values ("'.$cookie.'","'.$imagess.'","'.$names.'","'.$english.'","'.$detail.'","'.$dols.'","'.$cny.'","'.$qty.'","'.$suoyin.'")');
             echo "成功";
         }
+    }else if($show){
+        $res = $conn->query('select * from usership where zhanghao="'.$cookie.'"');
+        $contents = $res->fetch_all(MYSQLI_ASSOC);
+        // var_dump($contents);
+        $res->close();
+        $conn->close();
+        echo json_encode($contents,JSON_UNESCAPED_UNICODE);
     }else{
         echo "失败";
     }
