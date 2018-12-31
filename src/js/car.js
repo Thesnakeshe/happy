@@ -34,13 +34,25 @@ jQuery(function($) {
         $.getJSON("../api/car.php?show=true&zhanghao="+$cookieName,function(res){
             // console.log(res);
             $(".cartsts").html(xuanran(res));
-            console.log(res.length);
             //点击加数量
             $(".cartsts").on("click",".cartst .shujia1",function(){
                 var $ss1 = $(this).parent().parent().parent().attr("id");
                      
                 $.get("../api/car.php?shujia1=true&ss1="+$ss1,(res) => {
                     $(this).prev().val(res);
+                        var price = 0;
+                        // var arr = checknum();
+                        for(let i = 0; i < res.length; i++) {
+                            if($('.shujia11').eq(i).closest('.cartst').find('.good_checkbox').prop('checked')){
+                                var nowpri = $('.shujia11').eq(i).val();
+                                var danjia = $('.shujia11').eq(i).parent().parent().next().children().eq(0).html();
+                                danjia = danjia.substring(1);
+                                var nowpri = danjia*nowpri;
+                                price += parseInt(nowpri);
+                            }
+                        }
+                        $('.price').html("$"+price);
+                        $('.price2').html("约"+(price*6.8).toFixed(2)+"元")
                 })
             })
             //点击减数量
@@ -54,6 +66,20 @@ jQuery(function($) {
                 }else{
                     $.get("../api/car.php?shujian1=true&ss2="+$ss2,(res) => {
                         $(this).prev().prev().val(res);
+                        
+                        var price = 0;
+                        // var arr = checknum();
+                        for(let i = 0; i < res.length; i++) {
+                            if($('.shujia11').eq(i).closest('.cartst').find('.good_checkbox').prop('checked')){
+                                var nowpri = $('.shujia11').eq(i).val();
+                                var danjia = $('.shujia11').eq(i).parent().parent().next().children().eq(0).html();
+                                danjia = danjia.substring(1);
+                                var nowpri = danjia*nowpri;
+                                price += parseInt(nowpri);
+                            }
+                        }
+                        $('.price').html("$"+price);
+                        $('.price2').html("约"+(price*6.8).toFixed(2)+"元")
                     })
                 }
             })
@@ -75,6 +101,7 @@ jQuery(function($) {
                             }
                         }
                         $('.price').html("$"+price);
+                        $('.price2').html("约"+(price*6.8).toFixed(2)+"元")
                     // }
             });
 

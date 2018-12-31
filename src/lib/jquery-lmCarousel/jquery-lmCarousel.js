@@ -9,7 +9,6 @@ if(!jQuery.fn.lmCarousel){
             seamless : true //无缝滚动
         }
         var opt = Object.assign({},defaults,obj);
-        console.log(opt);
         var $ul;
         var $page;
         var init = () =>{

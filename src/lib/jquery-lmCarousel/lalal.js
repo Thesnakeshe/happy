@@ -43,7 +43,6 @@ jQuery.fn.lmCarousell=function(obj){
     }
     var move = () =>{
         $timer = setInterval(function(){
-            console.log(opt.idx);
             opt.idx++;
             showPic();
         }, 2000)

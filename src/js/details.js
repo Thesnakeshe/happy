@@ -71,7 +71,6 @@ jQuery(function($) {
             // if(e.target.tagName == "SPAN"){
             $currentPage = $(".kk2").html();
             $currentPage++;
-                console.log($currentPage);
             if($currentPage == 9){
                 $currentPage = 1;
             }
@@ -195,7 +194,6 @@ jQuery(function($) {
     
     //放大镜效果；
     $(".gp1").on("mouseover","img",function(){
-        console.log(5555);
         $(".gp1").css("opacity",0);
     })
     $(".gp1").on("mouseout","img",function(){
