@@ -82,25 +82,25 @@ jQuery(function($) {
             $('.cartsts').on('click', '.cartst', function() {
                 var $trs = $(".cartst");
                 var $xuanze = $(".cartsts :checked").length;
-                    if($xuanze == $trs.length){
-                        $('#all').prop("checked",true);
-                    }else{
-                        $('#all').prop("checked",false);
+                if($xuanze == $trs.length){
+                    $('#all').prop("checked",true);
+                }else{
+                    $('#all').prop("checked",false);
+                }
+                var price = 0;
+                // var arr = checknum();
+                for(let i = 0; i < res.length; i++) {
+                    if($('.shujia11').eq(i).closest('.cartst').find('.good_checkbox').prop('checked')){
+                        var nowpri = $('.shujia11').eq(i).val();
+                        var danjia = $('.shujia11').eq(i).parent().parent().next().children().eq(0).html();
+                        danjia = danjia.substring(1);
+                        var nowpri = danjia*nowpri;
+                        price += parseInt(nowpri);
                     }
-                        var price = 0;
-                        // var arr = checknum();
-                        for(let i = 0; i < res.length; i++) {
-                            if($('.shujia11').eq(i).closest('.cartst').find('.good_checkbox').prop('checked')){
-                                var nowpri = $('.shujia11').eq(i).val();
-                                var danjia = $('.shujia11').eq(i).parent().parent().next().children().eq(0).html();
-                                danjia = danjia.substring(1);
-                                var nowpri = danjia*nowpri;
-                                price += parseInt(nowpri);
-                            }
-                        }
-                        $('.price').html("$"+price);
-                        $('.price2').html("约"+(price*6.8).toFixed(2)+"元")
-                    // }
+                }
+                $('.price').html("$"+price);
+                $('.price2').html("约"+(price*6.8).toFixed(2)+"元")
+            // }
             });
             //点击删除键，删除选中的商品
             $('.btnDelete').on('click',function(){
@@ -122,7 +122,8 @@ jQuery(function($) {
                                         $(".carcs").html(ress.length);
                                     }
                                 })
-                                $(".cartsts").html(xuanran(res));
+                                $('.price').html("$0");
+                                $('.price2').html("约0元")
                             })
                             $('.good_checkbox').eq(i).closest('.cartst').remove();
                         }
@@ -157,7 +158,6 @@ jQuery(function($) {
                         $(".carcs").html(ress.length);
                     }
                 })
-                $(".cartsts").html(xuanran(res));
             })
         }
     });
